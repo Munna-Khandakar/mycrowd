@@ -15,7 +15,6 @@ import {
     TableRow,
 } from '@/components/ui/table';
 
-
 export const Historys = () => {
     return (
         <div className="flex min-h-screen w-full flex-col bg-muted/40">

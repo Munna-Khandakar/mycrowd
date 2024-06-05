@@ -1,9 +1,11 @@
-import {BriefcaseMedical, Search} from 'lucide-react';
-import {Input} from './ui/input';
-import {ProfileDropdown} from '@/components/ProfileDropdown';
+'use client';
 import Link from 'next/link';
+import {BriefcaseMedical, Search} from 'lucide-react';
+import {ProfileDropdown} from '@/components/ProfileDropdown';
+import {Input} from '../ui/input';
 
-export const Navbar = () => {
+export const UserNavbar = () => {
+
     return (
         <header className="sticky top-0 flex h-14 justify-between items-center gap-4 border-b bg-background px-4">
             <Link className="inline-flex gap-2 p-1" href={'/'}>
