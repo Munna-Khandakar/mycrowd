@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import {MoreHorizontal} from 'lucide-react';
+import {MoreHorizontal, PlusCircle, Search} from 'lucide-react';
 
 import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
@@ -26,11 +26,28 @@ import {
     TableHeader,
     TableRow,
 } from '@/components/ui/table';
+import {Input} from '@/components/ui/input';
 
 export function Products() {
     return (
         <div className="p-2 h-screen">
-            <Card className="rounded" style={{height: 'calc(100vh - 20px)'}}>
+            <div className="flex justify-end pb-2">
+                <div className="relative ml-auto pr-2 flex-1 md:grow-0">
+                    <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"/>
+                    <Input
+                        type="search"
+                        placeholder="Search..."
+                        className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
+                    />
+                </div>
+                <Button size="sm" className="h-8 gap-1">
+                    <PlusCircle className="h-3.5 w-3.5"/>
+                    <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
+                    Add Product
+                  </span>
+                </Button>
+            </div>
+            <Card className="rounded" style={{height: 'calc(100vh - 65px)'}}>
                 <CardHeader>
                     <CardTitle>Products</CardTitle>
                     <CardDescription>
@@ -45,12 +62,12 @@ export function Products() {
                                     <span className="sr-only">Image</span>
                                 </TableHead>
                                 <TableHead>Name</TableHead>
-                                <TableHead>Status</TableHead>
-                                <TableHead className="hidden md:table-cell">Price</TableHead>
+                                <TableHead className="hidden md:table-cell">Composition</TableHead>
+                                <TableHead className="hidden md:table-cell">Company</TableHead>
+                                <TableHead>Price(BDT)</TableHead>
                                 <TableHead className="hidden md:table-cell">
-                                    Total Sales
+                                    Type
                                 </TableHead>
-                                <TableHead className="hidden md:table-cell">Created at</TableHead>
                                 <TableHead>
                                     <span className="sr-only">Actions</span>
                                 </TableHead>
@@ -68,15 +85,13 @@ export function Products() {
                                     />
                                 </TableCell>
                                 <TableCell className="font-medium">
-                                    Laser Lemonade Machine
+                                    Napa Extra 500
                                 </TableCell>
-                                <TableCell>
-                                    <Badge variant="outline">Draft</Badge>
-                                </TableCell>
-                                <TableCell className="hidden md:table-cell">$499.99</TableCell>
-                                <TableCell className="hidden md:table-cell">25</TableCell>
+                                <TableCell className="hidden md:table-cell">Paracetamol + Caffeine</TableCell>
+                                <TableCell className="hidden md:table-cell">Beximco Pharmaceuticals Ltd.</TableCell>
+                                <TableCell>30</TableCell>
                                 <TableCell className="hidden md:table-cell">
-                                    2023-07-12 10:42 AM
+                                    <Badge variant={'outline'}>Tablet</Badge>
                                 </TableCell>
                                 <TableCell>
                                     <DropdownMenu>
@@ -106,15 +121,13 @@ export function Products() {
                                     />
                                 </TableCell>
                                 <TableCell className="font-medium">
-                                    Gamer Gear Pro Controller
+                                    Zimax
                                 </TableCell>
-                                <TableCell>
-                                    <Badge variant="outline">Active</Badge>
-                                </TableCell>
-                                <TableCell className="hidden md:table-cell">$59.99</TableCell>
-                                <TableCell className="hidden md:table-cell">75</TableCell>
+                                <TableCell className="hidden md:table-cell">Azithromycin Dihydrate</TableCell>
+                                <TableCell className="hidden md:table-cell">Square Pharmaceuticals PLC</TableCell>
+                                <TableCell>461</TableCell>
                                 <TableCell className="hidden md:table-cell">
-                                    2024-01-01 12:00 AM
+                                    <Badge variant={'outline'}>Injection</Badge>
                                 </TableCell>
                                 <TableCell>
                                     <DropdownMenu>
@@ -132,41 +145,7 @@ export function Products() {
                                     </DropdownMenu>
                                 </TableCell>
                             </TableRow>
-                            <TableRow>
-                                <TableCell className="hidden sm:table-cell">
-                                    <Image
-                                        alt="Product image"
-                                        className="aspect-square rounded-md object-cover"
-                                        height="64"
-                                        src="/placeholder.svg"
-                                        width="64"
-                                    />
-                                </TableCell>
-                                <TableCell className="font-medium">Luminous VR Headset</TableCell>
-                                <TableCell>
-                                    <Badge variant="outline">Active</Badge>
-                                </TableCell>
-                                <TableCell className="hidden md:table-cell">$199.99</TableCell>
-                                <TableCell className="hidden md:table-cell">30</TableCell>
-                                <TableCell className="hidden md:table-cell">
-                                    2024-02-14 02:14 PM
-                                </TableCell>
-                                <TableCell>
-                                    <DropdownMenu>
-                                        <DropdownMenuTrigger asChild>
-                                            <Button aria-haspopup="true" size="icon" variant="ghost">
-                                                <MoreHorizontal className="h-4 w-4"/>
-                                                <span className="sr-only">Toggle menu</span>
-                                            </Button>
-                                        </DropdownMenuTrigger>
-                                        <DropdownMenuContent align="end">
-                                            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                                            <DropdownMenuItem>Edit</DropdownMenuItem>
-                                            <DropdownMenuItem>Delete</DropdownMenuItem>
-                                        </DropdownMenuContent>
-                                    </DropdownMenu>
-                                </TableCell>
-                            </TableRow>
+
                         </TableBody>
                     </Table>
                 </CardContent>
