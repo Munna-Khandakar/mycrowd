@@ -1,3 +1,5 @@
+'use client';
+import {useState} from 'react';
 import Image from 'next/image';
 import {MoreHorizontal, PlusCircle, Search} from 'lucide-react';
 
@@ -27,8 +29,13 @@ import {
     TableRow,
 } from '@/components/ui/table';
 import {Input} from '@/components/ui/input';
+import {ProductForm} from '@/components/admin/products/ProductForm';
+import Modal from '@/components/Modal';
 
 export function Products() {
+
+    const [showModal, setShowModal] = useState(false);
+
     return (
         <div className="p-2 h-screen">
             <div className="flex justify-end pb-2">
@@ -40,7 +47,7 @@ export function Products() {
                         className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
                     />
                 </div>
-                <Button size="sm" className="h-8 gap-1">
+                <Button size="sm" className="h-8 gap-1" onClick={() => setShowModal(true)}>
                     <PlusCircle className="h-3.5 w-3.5"/>
                     <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
                     Add Product
@@ -155,6 +162,9 @@ export function Products() {
                     </div>
                 </CardFooter>
             </Card>
+            <Modal isOpen={showModal} onClose={() => setShowModal(false)} title="Add Medicine">
+                <ProductForm/>
+            </Modal>
         </div>
     );
 }
