@@ -32,6 +32,90 @@ import {Input} from '@/components/ui/input';
 import {ProductForm} from '@/components/admin/products/ProductForm';
 import Modal from '@/components/Modal';
 
+const ProductData = [
+    {
+        id: 1,
+        name: 'Napa Extra 500',
+        composition: 'Paracetamol + Caffeine',
+        company: 'Beximco Pharmaceuticals Ltd.',
+        price: 30,
+        type: 'Tablet',
+    },
+    {
+        id: 2,
+        name: 'Zimax',
+        composition: 'Azithromycin Dihydrate',
+        company: 'Square Pharmaceuticals PLC',
+        price: 461,
+        type: 'Injection',
+    },
+    {
+        id: 3,
+        name: 'Napa Extra 500',
+        composition: 'Paracetamol + Caffeine',
+        company: 'Beximco Pharmaceuticals Ltd.',
+        price: 30,
+        type: 'Tablet',
+    },
+    {
+        id: 4,
+        name: 'Zimax',
+        composition: 'Azithromycin Dihydrate',
+        company: 'Square Pharmaceuticals PLC',
+        price: 461,
+        type: 'Injection',
+    },
+    {
+        id: 5,
+        name: 'Napa Extra 500',
+        composition: 'Paracetamol + Caffeine',
+        company: 'Beximco Pharmaceuticals Ltd.',
+        price: 30,
+        type: 'Tablet',
+    },
+    {
+        id: 6,
+        name: 'Zimax',
+        composition: 'Azithromycin Dihydrate',
+        company: 'Square Pharmaceuticals PLC',
+        price: 461,
+        type: 'Injection',
+    },
+    {
+        id: 7,
+        name: 'Napa Extra 500',
+        composition: 'Paracetamol + Caffeine',
+        company: 'Beximco Pharmaceuticals Ltd.',
+        price: 30,
+        type: 'Tablet',
+    },
+    {
+        id: 8,
+        name: 'Zimax',
+        composition: 'Azithromycin Dihydrate',
+        company: 'Square Pharmaceuticals PLC',
+        price: 461,
+        type: 'Injection',
+    },
+    {
+        id: 9,
+        name: 'Napa Extra 500',
+        composition: 'Paracetamol + Caffeine',
+        company: 'Beximco Pharmaceuticals Ltd.',
+        price: 30,
+        type: 'Tablet',
+    },
+    {
+        id: 10,
+        name: 'Zimax',
+        composition: 'Azithromycin Dihydrate',
+        company: 'Square Pharmaceuticals PLC',
+        price: 461,
+        type: 'Injection',
+    }
+];
+
+
 export function Products() {
 
     const [showModal, setShowModal] = useState(false);
@@ -61,7 +145,7 @@ export function Products() {
                         Manage your products and view their sales performance.
                     </CardDescription>
                 </CardHeader>
-                <CardContent>
+                <CardContent className="h-[80%] overflow-y-scroll">
                     <Table>
                         <TableHeader>
                             <TableRow>
@@ -81,82 +165,50 @@ export function Products() {
                             </TableRow>
                         </TableHeader>
                         <TableBody>
-                            <TableRow>
-                                <TableCell className="hidden sm:table-cell">
-                                    <Image
-                                        alt="Product image"
-                                        className="aspect-square rounded-md object-cover"
-                                        height="64"
-                                        src="/placeholder.svg"
-                                        width="64"
-                                    />
-                                </TableCell>
-                                <TableCell className="font-medium">
-                                    Napa Extra 500
-                                </TableCell>
-                                <TableCell className="hidden md:table-cell">Paracetamol + Caffeine</TableCell>
-                                <TableCell className="hidden md:table-cell">Beximco Pharmaceuticals Ltd.</TableCell>
-                                <TableCell>30</TableCell>
-                                <TableCell className="hidden md:table-cell">
-                                    <Badge variant={'outline'}>Tablet</Badge>
-                                </TableCell>
-                                <TableCell>
-                                    <DropdownMenu>
-                                        <DropdownMenuTrigger asChild>
-                                            <Button aria-haspopup="true" size="icon" variant="ghost">
-                                                <MoreHorizontal className="h-4 w-4"/>
-                                                <span className="sr-only">Toggle menu</span>
-                                            </Button>
-                                        </DropdownMenuTrigger>
-                                        <DropdownMenuContent align="end">
-                                            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                                            <DropdownMenuItem>Edit</DropdownMenuItem>
-                                            <DropdownMenuItem>Delete</DropdownMenuItem>
-                                        </DropdownMenuContent>
-                                    </DropdownMenu>
-                                </TableCell>
-                            </TableRow>
-
-                            <TableRow>
-                                <TableCell className="hidden sm:table-cell">
-                                    <Image
-                                        alt="Product image"
-                                        className="aspect-square rounded-md object-cover"
-                                        height="64"
-                                        src="/placeholder.svg"
-                                        width="64"
-                                    />
-                                </TableCell>
-                                <TableCell className="font-medium">
-                                    Zimax
-                                </TableCell>
-                                <TableCell className="hidden md:table-cell">Azithromycin Dihydrate</TableCell>
-                                <TableCell className="hidden md:table-cell">Square Pharmaceuticals PLC</TableCell>
-                                <TableCell>461</TableCell>
-                                <TableCell className="hidden md:table-cell">
-                                    <Badge variant={'outline'}>Injection</Badge>
-                                </TableCell>
-                                <TableCell>
-                                    <DropdownMenu>
-                                        <DropdownMenuTrigger asChild>
-                                            <Button aria-haspopup="true" size="icon" variant="ghost">
-                                                <MoreHorizontal className="h-4 w-4"/>
-                                                <span className="sr-only">Toggle menu</span>
-                                            </Button>
-                                        </DropdownMenuTrigger>
-                                        <DropdownMenuContent align="end">
-                                            <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                                            <DropdownMenuItem>Edit</DropdownMenuItem>
-                                            <DropdownMenuItem>Delete</DropdownMenuItem>
-                                        </DropdownMenuContent>
-                                    </DropdownMenu>
-                                </TableCell>
-                            </TableRow>
+                            {
+                                ProductData.map((product) => (
+                                    <TableRow key={product.id}>
+                                        <TableCell className="hidden sm:table-cell">
+                                            <Image
+                                                alt="Product image"
+                                                className="aspect-square rounded-md object-cover"
+                                                height="64"
+                                                src="/placeholder.svg"
+                                                width="64"
+                                            />
+                                        </TableCell>
+                                        <TableCell className="font-medium">
+                                            {product.name}
+                                        </TableCell>
+                                        <TableCell className="hidden md:table-cell">{product.composition}</TableCell>
+                                        <TableCell className="hidden md:table-cell">{product.company}</TableCell>
+                                        <TableCell>{product.price}</TableCell>
+                                        <TableCell className="hidden md:table-cell">
+                                            <Badge variant={'outline'}>{product.type}</Badge>
+                                        </TableCell>
+                                        <TableCell>
+                                            <DropdownMenu>
+                                                <DropdownMenuTrigger asChild>
+                                                    <Button aria-haspopup="true" size="icon" variant="ghost">
+                                                        <MoreHorizontal className="h-4 w-4"/>
+                                                        <span className="sr-only">Toggle menu</span>
+                                                    </Button>
+                                                </DropdownMenuTrigger>
+                                                <DropdownMenuContent align="end">
+                                                    <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                                                    <DropdownMenuItem>Edit</DropdownMenuItem>
+                                                    <DropdownMenuItem>Delete</DropdownMenuItem>
+                                                </DropdownMenuContent>
+                                            </DropdownMenu>
+                                        </TableCell>
+                                    </TableRow>
+                                ))
+                            }
 
                         </TableBody>
                     </Table>
                 </CardContent>
-                <CardFooter>
+                <CardFooter className="py-2">
                     <div className="text-xs text-muted-foreground">
                         Showing <strong>1-10</strong> of <strong>32</strong> products
                     </div>
