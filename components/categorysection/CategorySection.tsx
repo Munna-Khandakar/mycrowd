@@ -1,48 +1,54 @@
-import {Grip} from "lucide-react";
-import {CategoryCard} from "@/components/categorysection/CategoryCard";
-import Dumbell from "./dumbbell.png";
-import PersonalCare from "./personal-care.png";
-import FamilyCare from "./nursing-home.png"
-import FastAidBox from "./first-aid-kit.png"
-import Syringe from "./syringe.png";
-import {Category} from "@/types/Category";
+import {CategoryCard} from '@/components/categorysection/CategoryCard';
+import ElderCare from './ElderCare.webp';
+import MustHave from './must-have.webp';
+import {Category} from '@/types/Category';
+import {SectionLabel} from '@/components/SectionLabel';
+
+const SECTION_LABEL = 'Shop by Categories';
 
 const CATEGORIES: Category[] = [
     {
-        label: 'Fitness',
-        icon: Dumbell,
-        color: '#F6D6D6'
+        label: 'Must Have',
+        icon: MustHave,
+        id: '#F6D6D6'
+    },
+    {
+        label: 'Elderly care',
+        icon: ElderCare,
+        id: '#CDFAD5'
     },
     {
         label: 'Personal Care',
-        icon: PersonalCare,
-        color: '#CDFAD5'
+        icon: ElderCare,
+        id: '#F6D6D6'
     },
     {
-        label: 'Family Care',
-        icon: FamilyCare,
-        color: '#CAEDFF'
+        label: 'Healthcare Device',
+        icon: ElderCare,
+        id: '#CDFAD5'
     },
     {
-        label: 'First Aid',
-        icon: FastAidBox,
-        color: '#F6F5F2'
+        label: 'Health Food and Drinks',
+        icon: ElderCare,
+        id: '#F6D6D6'
     },
     {
-        label: 'Vaccination',
-        icon: Syringe,
-        color: '#F6FDC3'
-    }
-]
+        label: 'Skin Care',
+        icon: ElderCare,
+        id: '#CDFAD5'
+    },
+    {
+        label: 'Mother and Baby Care',
+        icon: ElderCare,
+        id: '#F6D6D6'
+    },
+];
 
 export const CategorySection = () => {
     return (
         <section className="container mx-auto">
-            <div className="flex gap-2 items-center mt-4 mb-2 md:mt-10 md:mb-4">
-                <Grip/>
-                <h2 className="text-lg md:text-2xl font-bold text-slate-800">Category</h2>
-            </div>
-            <div className="flex flex-1 flex-nowrap gap-2 items-center overflow-x-auto">
+            <SectionLabel label={SECTION_LABEL}/>
+            <div className="flex flex-1 flex-nowrap gap-2 items-center overflow-x-auto py-2">
                 {
                     CATEGORIES.map((category) => (
                         <CategoryCard key={category.label} {...category}/>
@@ -50,5 +56,5 @@ export const CategorySection = () => {
                 }
             </div>
         </section>
-    )
-}
+    );
+};
