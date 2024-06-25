@@ -5,15 +5,14 @@ export type  Medicine = {
     image: any;
     category: string;
     discount?: number;
-    description?: string;
-    howToUse?: string;
-    ingredients?: string;
     productDetails?: ProductDetails;
 }
-
 
 type ProductDetails = {
     brand: string;
     expires: string;
-    countryOfOrigin: string;
+    countryOfOrigin?: string;
+    description?: string;
+    howToUse?: string;
+    ingredients?: string;
 }

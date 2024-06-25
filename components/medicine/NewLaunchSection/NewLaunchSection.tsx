@@ -11,7 +11,7 @@ export const NewLaunchSection = () => {
     return (
         <section className="container mx-auto">
             <SectionLabel label={SECTION_LABEL} subLabel={SUB_LABEL}/>
-            <div className="flex flex-1 flex-nowrap gap-2 items-center overflow-x-auto py-2">
+            <div className="flex flex-1 flex-nowrap gap-2 items-start overflow-x-auto py-2">
                 {
                     MEDICINE.map((medicine, index) => (
                         <MedicineCard

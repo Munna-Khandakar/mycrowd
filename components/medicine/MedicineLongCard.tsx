@@ -16,13 +16,13 @@ export function MedicineLongCard(props: MedicineLongCardProps) {
     const {medicine} = props;
 
     return (
-        <Link href={'1'} className="border p-3 rounded-lg min-w-fit">
+        <Link href={`/${medicine.category}/${medicine.id}`} className="border p-3 rounded-lg min-w-fit">
             <div className="flex flex-col items-center w-[120px] md:w-[200px] gap-2">
                 <div
                     className="flex items-center justify-center w-full h-[120px] md:h-[200px]">
                     <Image src={medicine.image} alt={medicine.name}
                            width={160} objectFit={'fill'}
-                           className="hover:scale-110 transition w-[100px] md:w-[160px] h-[100px] md:h-[160px]"
+                           className="hover:scale-110 transition w-full  h-full"
                     />
                 </div>
                 <div>
