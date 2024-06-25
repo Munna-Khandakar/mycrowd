@@ -3,6 +3,8 @@ export type  Medicine = {
     name: string;
     price: number;
     image: any;
+    category: string;
+    discount?: number;
     description?: string;
     howToUse?: string;
     ingredients?: string;
