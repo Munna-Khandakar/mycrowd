@@ -18,8 +18,8 @@ export const CategorySlugPage = () => {
     const {category_slug} = useParams();
 
     return (
-        <section className="container">
-            <div className="flex justify-between items-center my-2">
+        <section className="container py-8">
+            <div className="flex justify-between items-center pb-4">
                 <h1 className="text-2xl">{category_slug}</h1>
                 <Select>
                     <SelectTrigger className="w-[180px]">
