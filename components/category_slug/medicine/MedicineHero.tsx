@@ -6,6 +6,8 @@ import Link from 'next/link';
 import {Fragment} from 'react';
 import {Badge} from '@/components/ui/badge';
 import {MedicineUtils} from '@/utils/MedicineUtils';
+import {AddToCartButton} from '@/components/AddToCartButton';
+
 
 type MedicineHeroProps = {
     medicine: Medicine
@@ -31,36 +33,38 @@ export const MedicineHero = (props: MedicineHeroProps) => {
                     <Link
                         href={`/company/${medicine.productDetails?.brand}`}
                         className="text-teal-900 font-normal leading-7">Visit
-                        all {medicine?.productDetails?.brand} Company `&apos;`s Product
+                        all {medicine?.productDetails?.brand} Company &apos;s Product
                     </Link>
                 }
                 <br/>
-                <div className="mt-4">
+                <div className="flex justify-between items-center">
+                    <div className="mt-4">
                                 <span className="text-slate-900 font-bold text-xs md:text-lg leading-9">
                                 MRP:
                                 </span>
-                    <span className={`${medicine?.discount ? 'line-through text-slate-400' : ''}`}>
+                        <span className={`${medicine?.discount ? 'line-through text-slate-400' : ''}`}>
                                 ৳{medicine.price}
                                 </span>
-                    {
-                        medicine?.discount &&
-                        <Fragment>
-                            <Badge variant="secondary" className="text-red-500">
-                                {MedicineUtils.calculateDiscountPercentage(medicine.price, medicine.discount)}%
-                                OFF
-                            </Badge>
-                            <br/>
-                            <span
-                                className="font-bold text-slate-900">৳{medicine.price - medicine.discount}</span>
-                        </Fragment>
-                    }
+                        {
+                            medicine?.discount &&
+                            <Fragment>
+                                <Badge variant="secondary" className="text-red-500">
+                                    {MedicineUtils.calculateDiscountPercentage(medicine.price, medicine.discount)}%
+                                    OFF
+                                </Badge>
+                                <br/>
+                                <span
+                                    className="font-bold text-slate-900">৳{medicine.price - medicine.discount}</span>
+                            </Fragment>
+                        }
+                    </div>
+                    <AddToCartButton/>
                 </div>
                 <p className="text-xs text-slate-500">Inclusive of all taxes</p>
                 <p className="text-xs text-slate-500 mt-4">
                     Delivery by <b>Today, before 10:00 pm</b>
                 </p>
             </div>
-
         </div>
     );
 
