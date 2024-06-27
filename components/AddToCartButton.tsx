@@ -17,7 +17,7 @@ export const AddToCartButton = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState('');
 
-    const ref = useRef<any>();
+    const ref = useRef<HTMLDivElement>(null);
 
     const handleClick = () => {
         setShowDropdown(true);
