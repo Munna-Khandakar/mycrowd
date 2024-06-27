@@ -18,8 +18,8 @@ export const MedicineHero = (props: MedicineHeroProps) => {
     const {medicine} = props;
 
     return (
-        <div className="flex gap-8">
-            <div className="h-[250px] w-[250px] rounded-lg p-4 border items-center flex justify-center">
+        <div className="flex gap-4 md:gap-8">
+            <div className="h-[180px] md:h-[250px] w-[180px] md:w-[250px] rounded-lg p-4 border items-center flex justify-center">
                 <Image
                     src={medicine.image} alt={medicine.name}
                     className="w-full h-full hover:scale-110 transition"
@@ -27,12 +27,12 @@ export const MedicineHero = (props: MedicineHeroProps) => {
                 />
             </div>
             <div>
-                <h1 className="text-2xl font-medium leading-9">{medicine.name}</h1>
+                <h1 className="text-base md:text-2xl font-medium leading-5 md:leading-9">{medicine.name}</h1>
                 {
                     medicine?.productDetails &&
                     <Link
                         href={`/company/${medicine.productDetails?.brand}`}
-                        className="text-teal-900 font-normal leading-7">Visit
+                        className="text-teal-900 font-normal text-xs md:text-sm leading-2 md:leading-7">Visit
                         all {medicine?.productDetails?.brand} Company &apos;s Product
                     </Link>
                 }

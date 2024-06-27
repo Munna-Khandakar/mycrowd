@@ -41,23 +41,23 @@ export const Searchbar = () => {
     };
 
     return (
-        <section className="container p-12">
-            <div className="flex items-end justify-between">
-                <h2 className="text-2xl font-medium leading-10">What are you looking for</h2>
+        <section className="container p-4 md:p-12">
+            <div className="flex items-center md:items-end justify-between flex-col md:flex-row">
+                <h2 className="text-base md:text-2xl font-medium leading-10">What are you looking for</h2>
                 <div className="flex items-center justify-center gap-2">
                     <div className="flex items-center justify-center gap-2">
                         <ScrollText size={16}/>
-                        <span className="text-slate-600 text-sm">Order with prescription</span>
+                        <span className="text-slate-600 text-xs md:text-sm">Order with prescription</span>
                     </div>
                     <Button variant={'outline'} size={'sm'}
-                            className={`flex items-center justify-between gap-2 ${!searchDisabled ? '' : 'hero-cta-button text-white'} `}>
+                            className={`flex items-center text-xs md:text-sm justify-between gap-2 ${!searchDisabled ? '' : 'hero-cta-button text-white'} `}>
                         <Camera size={16}/>
                         Upload Now
                     </Button>
                 </div>
             </div>
             <div ref={searchInputRef}
-                 className="border rounded-2xl py-2 my-4"
+                 className="border rounded-2xl py-2 my-2 md:my-4"
             >
                 <div className="flex w-full justify-between items-center space-x-2 px-2">
                     <div className="flex items-center w-full">
@@ -65,7 +65,7 @@ export const Searchbar = () => {
                         <Input
                             type="email"
                             value={searchQuery}
-                            className="py-4 border-0 outline-none shadow-none focus:ring-0 w-full focus:outline-none focus-visible:ring-0"
+                            className="py-2 md:py-4 border-0 outline-none shadow-none focus:ring-0 w-full focus:outline-none focus-visible:ring-0"
                             placeholder="Search for medicines/heathcare products"
                             onChange={(e) => setSearchQuery(e.target.value)}
                             onFocus={() => setShowDropdown(true)}
