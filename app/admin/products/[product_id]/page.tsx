@@ -3,7 +3,7 @@
 import {useParams} from 'next/navigation';
 import {ProductForm} from '@/components/admin/products/ProductForm';
 
-export default function page() {
+export default function ProductPage() {
 
     const {product_id} = useParams();
 
@@ -16,5 +16,4 @@ export default function page() {
             <h1>Product 2</h1>
         </div>
     );
-
 }
