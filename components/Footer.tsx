@@ -1,4 +1,14 @@
+'use client';
+import {usePathname} from 'next/navigation';
+
 export const Footer = () => {
+
+    const pathName = usePathname();
+
+    if (pathName.match('/login') || pathName.match('/admin')) {
+        return null;
+    }
+
     return (
         <footer className="font-sans tracking-wide bg-teal-950 container py-8">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10">

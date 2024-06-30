@@ -1,9 +1,7 @@
 'use client';
-import {useState} from 'react';
+import {Fragment, useState} from 'react';
 import Image from 'next/image';
 import {MoreHorizontal, PlusCircle, Search} from 'lucide-react';
-
-import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
 import {
     DropdownMenu,
@@ -101,20 +99,20 @@ export function Customers() {
     const [showModal, setShowModal] = useState(false);
 
     return (
-        <div className="p-2 h-screen">
-            <div className="flex justify-end pb-2">
-                <div className="relative ml-auto pr-2 flex-1 md:grow-0">
-                    <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"/>
-                    <Input
-                        type="search"
-                        placeholder="Search..."
-                        className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
-                    />
-                </div>
-            </div>
+        <Fragment>
             <SimpleTable
                 title="Customers"
                 subTitle="Manage your customers and view their sales performance."
+                actionItems={
+                    <div className="relative">
+                        <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"/>
+                        <Input
+                            type="search"
+                            placeholder="Search..."
+                            className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
+                        />
+                    </div>
+                }
                 tableHeader={
                     <TableRow>
                         <TableHead className="hidden w-[100px] sm:table-cell">
@@ -170,6 +168,6 @@ export function Customers() {
             <Modal isOpen={showModal} onClose={() => setShowModal(false)} title="Add Medicine">
                 <ProductForm/>
             </Modal>
-        </div>
+        </Fragment>
     );
 }

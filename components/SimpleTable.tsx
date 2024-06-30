@@ -20,18 +20,25 @@ type SimpleTableProps = {
     subTitle?: string;
     tableHeader: any;
     tableBody: any;
+    actionItems?: any;
 };
 
 export function SimpleTable(props: SimpleTableProps) {
 
-    const {title, subTitle, tableHeader, tableBody} = props;
+    const {title, subTitle, tableHeader, tableBody, actionItems} = props;
+
     return (
-        <Card className="rounded" style={{height: 'calc(100vh - 65px)'}}>
-            <CardHeader>
-                <CardTitle>{title}</CardTitle>
+        <Card className="rounded" style={{height: 'calc(100vh - 100px)'}}>
+            <CardHeader className="flex justify-between flex-row items-center">
+                <div>
+                    <CardTitle>{title}</CardTitle>
+                    {
+                        subTitle &&
+                        <CardDescription className="mt-2"> {subTitle}  </CardDescription>
+                    }
+                </div>
                 {
-                    subTitle
-                    && (<CardDescription> {subTitle}  </CardDescription>)
+                    actionItems
                 }
             </CardHeader>
             <CardContent className="h-[80%] overflow-y-scroll">

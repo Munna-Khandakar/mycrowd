@@ -1,5 +1,7 @@
 import {Metadata} from 'next';
 import {AdminNavbar} from '@/components/Navbar/AdminNavbar';
+import {TooltipProvider} from '@/components/ui/tooltip';
+import {AdminHeader} from '@/components/admin/common/AdminHeader';
 
 export const metadata: Metadata = {
     title: 'Medicine 24/7',
@@ -9,13 +11,17 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: Readonly<{ children: React.ReactNode; }>) {
 
     return (
-        <div className="flex">
-            <div className="w-1/4 h-screen">
+        <div className="flex min-h-screen w-full flex-col bg-muted/40">
+            <TooltipProvider>
                 <AdminNavbar/>
-            </div>
-            <div className="w-3/4">
-                {children}
-            </div>
+                <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
+                    <AdminHeader/>
+                    <main
+                        className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
+                        {children}
+                    </main>
+                </div>
+            </TooltipProvider>
         </div>
 
     );
