@@ -1,12 +1,13 @@
 import * as React from 'react';
 import {useForm, SubmitHandler} from 'react-hook-form';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 import {cn} from '@/lib/utils';
 import {Button} from '@/components/ui/button';
-
 import {Input} from '@/components/ui/input';
 import {Label} from '@/components/ui/label';
-import {PlusCircle, Upload} from 'lucide-react';
+import {Upload} from 'lucide-react';
 
 import {
     Card,
@@ -15,9 +16,17 @@ import {
     CardHeader,
     CardTitle,
 } from '@/components/ui/card';
-import {Textarea} from '@/components/ui/textarea';
+import {CalendarIcon} from '@radix-ui/react-icons';
+import {format} from 'date-fns';
+import {Calendar} from '@/components/ui/calendar';
+import {
+    Popover,
+    PopoverContent,
+    PopoverTrigger,
+} from '@/components/ui/popover';
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from '@/components/ui/select';
 import Image from 'next/image';
+import {useState} from 'react';
 
 type Inputs = {
     name: string
@@ -30,6 +39,9 @@ type Inputs = {
 
 export const ProductForm = () => {
 
+    const [value, setValue] = useState('');
+    const [date, setDate] = useState<Date>();
+
     const {
         register,
         handleSubmit,
@@ -38,8 +50,6 @@ export const ProductForm = () => {
     } = useForm<Inputs>();
 
     const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
-
-    console.log(watch('name'));
 
     return (
         <form
@@ -67,11 +77,17 @@ export const ProductForm = () => {
                             </div>
                             <div className="grid gap-3">
                                 <Label htmlFor="description">Description</Label>
-                                <Textarea
-                                    id="description"
-                                    defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec ultricies ultricies, nunc nisl ultricies nunc, nec ultricies nunc nisl nec nunc."
-                                    className="min-h-32"
-                                />
+                                <div className="">
+                                    <ReactQuill
+                                        value={value}
+                                        onChange={(value) => setValue(value)}
+                                        placeholder="medicine the descriptions"
+                                        style={{
+                                            maxHeight: '200px',
+                                            overflowY: 'auto',
+                                        }}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </CardContent>
@@ -112,31 +128,69 @@ export const ProductForm = () => {
                         </div>
                     </CardContent>
                 </Card>
-            </div>
-            <div className="col-span-1">
                 <Card>
                     <CardHeader>
-                        <CardTitle>Product Status</CardTitle>
+                        <CardTitle>Manufacturing Information</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        <div className="grid gap-6">
+                        <div className="grid gap-6 sm:grid-cols-3">
                             <div className="grid gap-3">
-                            <Label htmlFor="status">Status</Label>
+                                <Label htmlFor="category">Manufactured Company</Label>
                                 <Select>
-                                    <SelectTrigger id="status" aria-label="Select status">
-                                        <SelectValue placeholder="Select status"/>
+                                    <SelectTrigger id="category" aria-label="Select category">
+                                        <SelectValue placeholder="Select category"/>
                                     </SelectTrigger>
                                     <SelectContent>
-                                        <SelectItem value="draft">Draft</SelectItem>
-                                        <SelectItem value="published">Active</SelectItem>
-                                        <SelectItem value="archived">Archived</SelectItem>
+                                        <SelectItem value="clothing">Square Ltd</SelectItem>
+                                        <SelectItem value="electronics">ACI Ltd</SelectItem>
+                                        <SelectItem value="accessories">Acme Pharmaceuticals Ltd</SelectItem>
+                                    </SelectContent>
+                                </Select>
+                            </div>
+                            <div className="grid gap-3">
+                                <Label htmlFor="subcategory">Expires In (Date)</Label>
+                                <Popover>
+                                    <PopoverTrigger asChild>
+                                        <Button
+                                            variant={'outline'}
+                                            className={cn(
+                                                'w-[240px] justify-start text-left font-normal',
+                                                !date && 'text-muted-foreground'
+                                            )}
+                                        >
+                                            <CalendarIcon className="mr-2 h-4 w-4"/>
+                                            {date ? format(date, 'PPP') : <span>Pick a date</span>}
+                                        </Button>
+                                    </PopoverTrigger>
+                                    <PopoverContent className="w-auto p-0" align="start">
+                                        <Calendar
+                                            mode="single"
+                                            selected={date}
+                                            onSelect={setDate}
+                                            initialFocus
+                                        />
+                                    </PopoverContent>
+                                </Popover>
+                            </div>
+                            <div className="grid gap-3">
+                                <Label htmlFor="category">Origin</Label>
+                                <Select>
+                                    <SelectTrigger id="category" aria-label="Select category">
+                                        <SelectValue placeholder="Select Country"/>
+                                    </SelectTrigger>
+                                    <SelectContent>
+                                        <SelectItem value="clothing">Bangladesh</SelectItem>
+                                        <SelectItem value="electronics">India</SelectItem>
+                                        <SelectItem value="accessories">China</SelectItem>
                                     </SelectContent>
                                 </Select>
                             </div>
                         </div>
                     </CardContent>
                 </Card>
-                <Card className="overflow-hidden mt-2">
+            </div>
+            <div className="col-span-1">
+                <Card className="overflow-hidden">
                     <CardHeader>
                         <CardTitle>Product Images</CardTitle>
                         <CardDescription>

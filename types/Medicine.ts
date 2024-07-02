@@ -5,7 +5,7 @@ export type  Medicine = {
     image: any;
     category: string;
     discount?: number;
-    stock: number;
+    stock?: number;
     productDetails?: ProductDetails;
 }
 
