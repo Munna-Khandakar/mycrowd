@@ -46,12 +46,12 @@ export const ProductForm = () => {
             className={cn('grid items-start gap-4 grid-cols-3')}
             onSubmit={handleSubmit(onSubmit)}
         >
-            <div className="col-span-2">
+            <div className="col-span-2 flex flex-col gap-4">
                 <Card>
                     <CardHeader>
                         <CardTitle>Product Details</CardTitle>
                         <CardDescription>
-                            Lipsum dolor sit amet, consectetur adipiscing elit
+                            User will get these details in the product page
                         </CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -62,7 +62,7 @@ export const ProductForm = () => {
                                     id="name"
                                     type="text"
                                     className="w-full"
-                                    defaultValue="Gamer Gear Pro Controller"
+                                    placeholder="medicine name"
                                 />
                             </div>
                             <div className="grid gap-3">
@@ -71,6 +71,42 @@ export const ProductForm = () => {
                                     id="description"
                                     defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl nec ultricies ultricies, nunc nisl ultricies nunc, nec ultricies nunc nisl nec nunc."
                                     className="min-h-32"
+                                />
+                            </div>
+                        </div>
+                    </CardContent>
+                </Card>
+                <Card>
+                    <CardHeader>
+                        <CardTitle>Product Price</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="grid gap-6 sm:grid-cols-3">
+                            <div className="grid gap-3">
+                                <Label htmlFor="price">Price(BDT)</Label>
+                                <Input
+                                    id="price"
+                                    type="number"
+                                    className="w-full"
+                                    placeholder="BDT"
+                                />
+                            </div>
+                            <div className="grid gap-3">
+                                <Label htmlFor="discount">Discount (BDT)</Label>
+                                <Input
+                                    id="discount"
+                                    type="number"
+                                    className="w-full"
+                                    placeholder="BDT"
+                                />
+                            </div>
+                            <div className="grid gap-3">
+                                <Label htmlFor="discount">Available in Stock</Label>
+                                <Input
+                                    id="stock"
+                                    type="number"
+                                    className="w-full"
+                                    placeholder=""
                                 />
                             </div>
                         </div>
@@ -85,10 +121,10 @@ export const ProductForm = () => {
                     <CardContent>
                         <div className="grid gap-6">
                             <div className="grid gap-3">
-                                <Label htmlFor="status">Status</Label>
+                            <Label htmlFor="status">Status</Label>
                                 <Select>
                                     <SelectTrigger id="status" aria-label="Select status">
-                                        <SelectValue placeholder="Select status" />
+                                        <SelectValue placeholder="Select status"/>
                                     </SelectTrigger>
                                     <SelectContent>
                                         <SelectItem value="draft">Draft</SelectItem>
@@ -135,8 +171,9 @@ export const ProductForm = () => {
                                         width="84"
                                     />
                                 </button>
-                                <button className="flex aspect-square w-full items-center justify-center rounded-md border border-dashed">
-                                    <Upload className="h-4 w-4 text-muted-foreground" />
+                                <button
+                                    className="flex aspect-square w-full items-center justify-center rounded-md border border-dashed">
+                                    <Upload className="h-4 w-4 text-muted-foreground"/>
                                     <span className="sr-only">Upload</span>
                                 </button>
                             </div>
