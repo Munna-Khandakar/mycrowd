@@ -29,19 +29,19 @@ export function SimpleTable(props: SimpleTableProps) {
 
     return (
         <Card className="rounded" style={{height: 'calc(100vh - 100px)'}}>
-            <CardHeader className="flex justify-between flex-row items-center">
-                <div>
-                    <CardTitle>{title}</CardTitle>
-                    {
-                        subTitle &&
-                        <CardDescription className="mt-2"> {subTitle}  </CardDescription>
-                    }
-                </div>
-                {
-                    actionItems
-                }
+            <CardHeader className="flex justify-between flex-col md:flex-row items-center">
+             <div>
+                 <CardTitle>{title}</CardTitle>
+                 {
+                     subTitle &&
+                     <CardDescription className="mt-2"> {subTitle}  </CardDescription>
+                 }
+             </div>
+             {
+                 actionItems
+             }
             </CardHeader>
-            <CardContent className="h-[80%] overflow-y-scroll">
+            <CardContent className="h-[65%] md:h-[80%] overflow-y-scroll">
                 <Table>
                     <TableHeader>
                         {tableHeader}

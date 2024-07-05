@@ -114,7 +114,7 @@ export function Products() {
                 title={'Products'}
                 subTitle={'Manage your products and view their sales performance.'}
                 actionItems={
-                    <div className="flex justify-end items-center pb-2">
+                    <div className="flex justify-end items-center pb-2 w-full">
                         <div className="relative ml-auto pr-2 flex-1 md:grow-0">
                             <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"/>
                             <Input
@@ -127,7 +127,7 @@ export function Products() {
                               title="Add Product"
                               className="flex items-center justify-between bg-black text-white px-3 py-2 rounded h-8 gap-1">
                             <PlusCircle className="h-3.5 w-3.5"/>
-                            <span className="whitespace-nowrap text-sm">
+                            <span className="hidden md:block whitespace-nowrap text-sm">
                                   Add Product
                             </span>
                         </Link>

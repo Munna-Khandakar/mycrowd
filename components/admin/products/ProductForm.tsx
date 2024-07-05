@@ -55,10 +55,10 @@ export const ProductForm = () => {
 
     return (
         <form
-            className={cn('grid items-start gap-4 grid-cols-3')}
+            className={cn('grid items-start gap-4 grid-cols-1 md:grid-cols-3')}
             onSubmit={handleSubmit(onSubmit)}
         >
-            <div className="col-span-2 flex flex-col gap-4">
+            <div className="col-span-1 md:col-span-2 flex flex-col gap-4">
                 <Card>
                     <CardHeader>
                         <CardTitle>Product Details</CardTitle>
