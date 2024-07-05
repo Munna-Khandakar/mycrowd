@@ -2,7 +2,7 @@
 
 import {Sheet, SheetContent, SheetTrigger} from '@/components/ui/sheet';
 import {Button} from '@/components/ui/button';
-import {Home, LineChart, Package, Package2, PanelLeft, ShoppingCart, Users2} from 'lucide-react';
+import {Home, LineChart, Package, Package2, PanelLeft, ShoppingCart, Users, Users2} from 'lucide-react';
 import Link from 'next/link';
 import {
     Breadcrumb,
@@ -35,6 +35,34 @@ export const AdminHeader = () => {
 
     const [open, setOpen] = React.useState(false);
 
+    const NavItems = [
+        {
+            icon: Home,
+            label: 'Dashboard',
+            href: '/admin/dashboard',
+        },
+        {
+            icon: ShoppingCart,
+            label: 'Orders',
+            href: '/admin/orders',
+        },
+        {
+            icon: Package,
+            label: 'Products',
+            href: '/admin/products',
+        },
+        {
+            icon: Users,
+            label: 'Customers',
+            href: '/admin/customers',
+        },
+        {
+            icon: LineChart,
+            label: 'Analytics',
+            href: '/admin/analytics',
+        },
+    ];
+
     React.useEffect(() => {
         const down = (e: KeyboardEvent) => {
             if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
@@ -58,48 +86,14 @@ export const AdminHeader = () => {
                 </SheetTrigger>
                 <SheetContent side="left" className="sm:max-w-xs">
                     <nav className="grid gap-6 text-lg font-medium">
-                        <Link
-                            href="#"
-                            className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:text-base"
-                        >
-                            <Package2 className="h-5 w-5 transition-all group-hover:scale-110"/>
-                            <span className="sr-only">Acme Inc</span>
-                        </Link>
-                        <Link
-                            href="#"
-                            className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
-                        >
-                            <Home className="h-5 w-5"/>
-                            Dashboard
-                        </Link>
-                        <Link
-                            href="#"
-                            className="flex items-center gap-4 px-2.5 text-foreground"
-                        >
-                            <ShoppingCart className="h-5 w-5"/>
-                            Orders
-                        </Link>
-                        <Link
-                            href="#"
-                            className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
-                        >
-                            <Package className="h-5 w-5"/>
-                            Products
-                        </Link>
-                        <Link
-                            href="#"
-                            className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
-                        >
-                            <Users2 className="h-5 w-5"/>
-                            Customers
-                        </Link>
-                        <Link
-                            href="#"
-                            className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
-                        >
-                            <LineChart className="h-5 w-5"/>
-                            Settings
-                        </Link>
+                        {
+                            NavItems.map(({icon: Icon, label, href}) => (
+                                <Link key={label} href={href} className="flex items-center gap-2 p-4 rounded-lg transition-colors hover:bg-accent hover:text-accent-foreground">
+                                        <Icon className="h-6 w-6"/>
+                                        <span>{label}</span>
+                                </Link>
+                            ))
+                        }
                     </nav>
                 </SheetContent>
             </Sheet>
