@@ -1,8 +1,9 @@
 'use client';
-import {Fragment, useState} from 'react';
+
+import {Fragment} from 'react';
 import Image from 'next/image';
 import {MoreHorizontal, PlusCircle, Search} from 'lucide-react';
-import {Button} from '@/components/ui/button';
+import Revital from '@/components/medicine/revital.webp';
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -11,14 +12,11 @@ import {
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import {
-
     TableCell,
     TableHead,
     TableRow,
 } from '@/components/ui/table';
 import {Input} from '@/components/ui/input';
-import {ProductForm} from '@/components/admin/products/ProductForm';
-import Modal from '@/components/Modal';
 import {SimpleTable} from '@/components/SimpleTable';
 
 const CustomerData = [
@@ -96,8 +94,6 @@ const CustomerData = [
 
 export function Customers() {
 
-    const [showModal, setShowModal] = useState(false);
-
     return (
         <Fragment>
             <SimpleTable
@@ -132,7 +128,7 @@ export function Customers() {
                         <TableRow key={product.id}>
                             <TableCell className="hidden sm:table-cell">
                                 <Image
-                                    src="/images/medicine.png"
+                                    src={Revital}
                                     alt="medicine"
                                     width={40}
                                     height={40}
@@ -146,15 +142,14 @@ export function Customers() {
                             <TableCell>
                                 <DropdownMenu>
                                     <DropdownMenuTrigger>
-                                        <Button variant="ghost" className="p-2">
+                                        {/*<Button variant="ghost" className="p-2">*/}
                                             <MoreHorizontal/>
-                                        </Button>
+                                        {/*</Button>*/}
                                     </DropdownMenuTrigger>
                                     <DropdownMenuContent>
                                         <DropdownMenuItem>
                                             <DropdownMenuLabel>
                                                 <PlusCircle className="mr-2"/>
-                                                Add Order
                                             </DropdownMenuLabel>
                                         </DropdownMenuItem>
                                     </DropdownMenuContent>
@@ -164,10 +159,6 @@ export function Customers() {
                     ))
                 }
             />
-
-            <Modal isOpen={showModal} onClose={() => setShowModal(false)} title="Add Medicine">
-                <ProductForm/>
-            </Modal>
         </Fragment>
     );
 }

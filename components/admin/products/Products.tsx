@@ -1,5 +1,5 @@
 'use client';
-import {Fragment, useState} from 'react';
+import {Fragment} from 'react';
 import Image from 'next/image';
 import {MoreHorizontal, PlusCircle, Search} from 'lucide-react';
 
@@ -18,9 +18,8 @@ import {
     TableRow,
 } from '@/components/ui/table';
 import {Input} from '@/components/ui/input';
-import {ProductForm} from '@/components/admin/products/ProductForm';
-import Modal from '@/components/Modal';
 import {SimpleTable} from '@/components/SimpleTable';
+import Revital from '@/components/medicine/revital.webp';
 import Link from 'next/link';
 
 const ProductData = [
@@ -109,8 +108,6 @@ const ProductData = [
 
 export function Products() {
 
-    const [showModal, setShowModal] = useState(false);
-
     return (
         <Fragment>
             <SimpleTable
@@ -161,7 +158,7 @@ export function Products() {
                                     alt="Product image"
                                     className="aspect-square rounded-md object-cover"
                                     height="64"
-                                    src="/placeholder.svg"
+                                    src={Revital}
                                     width="64"
                                 />
                             </TableCell>
@@ -193,9 +190,6 @@ export function Products() {
                     ))
                 }
             />
-            <Modal isOpen={showModal} onClose={() => setShowModal(false)} title="Add Medicine">
-                <ProductForm/>
-            </Modal>
         </Fragment>
     );
 }

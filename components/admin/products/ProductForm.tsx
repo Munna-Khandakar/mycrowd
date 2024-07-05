@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react';
 import {useForm, SubmitHandler} from 'react-hook-form';
 import ReactQuill from 'react-quill';
