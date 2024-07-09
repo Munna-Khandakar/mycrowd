@@ -1,4 +1,5 @@
 'use client';
+
 import Link from 'next/link';
 import {BriefcaseMedical, Search} from 'lucide-react';
 import {ProfileDropdown} from '@/components/ProfileDropdown';

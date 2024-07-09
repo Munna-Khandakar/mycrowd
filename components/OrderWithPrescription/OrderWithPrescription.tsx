@@ -4,7 +4,7 @@ import {Button} from '@/components/ui/button';
 
 export const OrderWithPrescription = () => {
     return (
-        <section className="container my-11">
+        <section className="container">
             <div  className="rounded-lg border bg-teal-50 p-3 md:p-6">
                 <div className="flex justify-between items-start">
                     <div>
