@@ -8,7 +8,6 @@ const divStyle = {
     alignItems: 'center',
     justifyContent: 'center',
     backgroundSize: 'cover',
-    height: '400px'
 };
 
 const slideImages = [
@@ -27,7 +26,10 @@ export const Promo = () => {
                 <Slide>
                     {slideImages.map((slideImage, index) => (
                         <div key={index}>
-                            <div style={{...divStyle, 'backgroundImage': `url(${slideImage.url})`}}>
+                            <div
+                                className="h-[100px] md:h-[300px]"
+                                style={{...divStyle, 'backgroundImage': `url(${slideImage.url})`}}
+                            >
                             </div>
                         </div>
                     ))}
