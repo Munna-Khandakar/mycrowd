@@ -8,7 +8,7 @@ export const SectionLabel = (props: SectionLabelProps) => {
     const {label, subLabel} = props;
 
     return (
-        <div className="flex flex-col gap-2 items-start mb-2 md:mb-4">
+        <div className="flex flex-col gap-0 md:gap-2 items-start mb-2 md:mb-4">
             <h2 className="text-lg md:text-2xl font-semibold antialiased leading-8 tracking-normal text-slate-800">
                 {label}
             </h2>

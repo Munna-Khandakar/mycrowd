@@ -6,10 +6,10 @@ import Image from 'next/image';
 export const SelfAdvertisement = () => {
 
     return (
-        <section className="container">
+        <section className="md:container">
             <div
-                className="h-full md:h-[320px] flex flex-col md:flex-row gap-4 items-center justify-between rounded-lg bg-gradient-to-bl from-emerald-900 to-teal-500">
-                <div className="">
+                className="px-5 md:px-0 h-full md:h-[320px] flex flex-col md:flex-row gap-4 items-center justify-between md:rounded-lg bg-gradient-to-bl from-emerald-900 to-teal-500">
+                <div>
                     <div className="flex flex-col items-center gap-2 mt-8 pl-1 md:pl-8">
                         <div className="flex flex-row gap-2 text-lg md:text-3xl text-white font-semibold">
                             <span>Become a </span>
@@ -17,7 +17,7 @@ export const SelfAdvertisement = () => {
                             <span>member</span>
                         </div>
                         <span
-                            className="text-xs text-center md:text-base font-bold text-slate-100 leading-5 md:leading-10">Save 5% on medicines, 50% on 1st lab test & get FREE delivery with PLUS membership</span>
+                            className="text-xs text-center md:text-base font-medium text-slate-100 leading-5 md:leading-10">Save 5% on medicines, 50% on 1st lab test & get FREE delivery with PLUS membership</span>
                         <span className="text-xs text-center md:text-sm font-medium text-slate-200">Enjoy extra bachat on every order</span>
                     </div>
                 </div>

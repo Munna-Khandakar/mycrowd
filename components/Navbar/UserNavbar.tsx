@@ -8,7 +8,7 @@ import {Input} from '../ui/input';
 export const UserNavbar = () => {
 
     return (
-        <header className="sticky top-0 flex h-14 justify-between items-center gap-4 border-b bg-background px-4">
+        <header className="sticky top-0 flex h-14 z-50 justify-between items-center gap-4 border-b bg-background px-4">
             <Link className="inline-flex gap-2 p-1" href={'/'}>
                 <BriefcaseMedical/>
                 <span className="hidden md:block">Medicine 24/7</span>

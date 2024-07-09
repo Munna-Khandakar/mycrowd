@@ -5,6 +5,8 @@ import {OrderWithPrescription} from '@/components/OrderWithPrescription/OrderWit
 import {Promo} from '@/components/promo/Promo';
 import {TrendingNearYouSection} from '@/components/medicine/TrendingNearYouSection';
 import {SelfAdvertisement} from '@/components/SelfAdvertisement/SelfAdvertisement';
+import {DealsOfTheDay} from '@/components/DealsOfTheDay/DealsOfTheDay';
+import {HealthArticles} from '@/components/HealthArticle/HealthArticles';
 
 export default function Home() {
     return (
@@ -16,6 +18,8 @@ export default function Home() {
             <NewLaunchSection/>
             <TrendingNearYouSection/>
             <SelfAdvertisement/>
+            <DealsOfTheDay/>
+            <HealthArticles/>
         </main>
     );
 }
