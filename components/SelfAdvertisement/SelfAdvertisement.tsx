@@ -6,11 +6,11 @@ import Image from 'next/image';
 export const SelfAdvertisement = () => {
 
     return (
-        <section className="md:container">
-            <div
-                className="px-5 md:px-0 h-full md:h-[320px] flex flex-col md:flex-row gap-4 items-center justify-between md:rounded-lg bg-gradient-to-bl from-emerald-900 to-teal-500">
+        <div className="container bg-gradient-to-bl from-emerald-900 to-teal-500">
+            <section
+                className="container h-full md:h-[320px] flex flex-col md:flex-row gap-4 items-center justify-between">
                 <div>
-                    <div className="flex flex-col items-center gap-2 mt-8 pl-1 md:pl-8">
+                    <div className="flex flex-col items-center gap-2 mt-8 md:mt-0">
                         <div className="flex flex-row gap-2 text-lg md:text-3xl text-white font-semibold">
                             <span>Become a </span>
                             <div className="h-2 md:h-4 w-14 md:w-24"><PlusSvg/></div>
@@ -24,7 +24,7 @@ export const SelfAdvertisement = () => {
                 <div className="items-center flex justify-center h-full">
                     <Image className="w-full h-full " src={FamilyPic} alt={'group family photo'}/>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
     );
 };

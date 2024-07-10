@@ -7,6 +7,7 @@ import {TrendingNearYouSection} from '@/components/medicine/TrendingNearYouSecti
 import {SelfAdvertisement} from '@/components/SelfAdvertisement/SelfAdvertisement';
 import {DealsOfTheDay} from '@/components/DealsOfTheDay/DealsOfTheDay';
 import {HealthArticles} from '@/components/HealthArticle/HealthArticles';
+import {WhyChooseUs} from '@/components/WhyChooseUs/WhyChooseUs.';
 
 export default function Home() {
     return (
@@ -20,6 +21,7 @@ export default function Home() {
             <SelfAdvertisement/>
             <DealsOfTheDay/>
             <HealthArticles/>
+            <WhyChooseUs/>
         </main>
     );
 }

@@ -17,7 +17,6 @@ export const SectionLabel = (props: SectionLabelProps) => {
                 <p className="text-sm md:text-base font-normal antialiased leading-6 tracking-normal text-slate-500">
                     {subLabel}
                 </p>
-
             }
         </div>
     );
