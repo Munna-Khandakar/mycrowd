@@ -1,5 +1,7 @@
 'use client';
 import {usePathname} from 'next/navigation';
+import Image from 'next/image';
+import Logo from "@/public/logo.png"
 
 export const Footer = () => {
 
@@ -14,9 +16,7 @@ export const Footer = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10">
                 <div>
                     <a href="#">
-                        <img src="https://logos-world.net/wp-content/uploads/2023/09/Abbot-Laboratories-Logo.png"
-                             alt="logo"
-                             className="w-44"/>
+                        <Image  className="w-24 md:w-44" src={Logo} alt={'logo'}/>
                     </a>
 
                     <ul className="mt-10 flex space-x-5">
