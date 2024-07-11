@@ -3,31 +3,54 @@
 import {useEffect, useRef, useState} from 'react';
 import Select from 'react-select';
 import {Button} from '@/components/ui/button';
+import {LocalStorageUtils} from '@/utils/LocalStorageUtils';
 
-const options = [
-    {value: '1', label: 'Qty 1'},
-    {value: '2', label: 'Qty 2'},
-    {value: '3', label: 'Qty 3'},
-    {value: '4', label: 'Qty 4'},
-];
+type AddToCartButtonProps = {
+    medicineId: string
+    stock: number
+}
 
-export const AddToCartButton = () => {
+type OptionType = { value: string; label: string };
 
-    const [showDropdown, setShowDropdown] = useState(false);
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [selectedOption, setSelectedOption] = useState('');
+export const AddToCartButton = (props: AddToCartButtonProps) => {
+
+    const {medicineId, stock} = props;
 
     const ref = useRef<HTMLDivElement>(null);
+    const [showDropdown, setShowDropdown] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [selectedQuantity, setSelectedQuantity] = useState('');
+    const [quantityDropDownValues, setQuantityDropDownValues] = useState<OptionType[]>([]);
 
     const handleClick = () => {
         setShowDropdown(true);
         setMenuOpen(true);
     };
 
+    const handleCartUpdate = (quantity: number) => {
+        if (quantity === 0) {
+            LocalStorageUtils.removeFromCart(medicineId);
+        } else {
+            LocalStorageUtils.addToCart({id: medicineId, quantity: quantity});
+        }
+    };
+
+    useEffect(() => {
+        const quantity = stock;
+        const values: OptionType[] = [];
+        for (let i = 1; i <= quantity; i++) {
+            values.push({value: i + '', label: `Qty ${i}`});
+        }
+        if (selectedQuantity != '0') {
+            values.unshift({value: '0', label: 'Remove Item'});
+        }
+        setQuantityDropDownValues(values);
+    }, [medicineId, selectedQuantity]);
+
     useEffect(() => {
         const handleClickOutside = (event: any) => {
 
-            if (selectedOption !== '') {
+            if (selectedQuantity !== '') {
                 return;
             }
 
@@ -40,19 +63,20 @@ export const AddToCartButton = () => {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, [selectedOption]);
+    }, [selectedQuantity]);
 
     return (
-        <div ref={ref}>
+        <div ref={ref} className="w-44">
             {
                 showDropdown
                     ? <Select
-                        options={options}
+                        options={quantityDropDownValues}
                         menuIsOpen={menuOpen}
                         onMenuOpen={() => setMenuOpen(true)}
                         onMenuClose={() => setMenuOpen(false)}
                         onChange={(newValue) => {
-                            setSelectedOption(newValue!.value);
+                            setSelectedQuantity(newValue!.value);
+                            handleCartUpdate(parseInt(newValue!.value));
                         }}
                     />
                     : <Button onClick={handleClick}>Add To Cart</Button>

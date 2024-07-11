@@ -14,6 +14,7 @@ export const MEDICINE: Medicine[] = [
         name: 'Softovac Liquifibre Mango Flavour Sugar Free Bottle Of 225ml Liquid',
         category: 'health-care',
         price: 140,
+        stock: Math.floor(Math.random() * 15) + 1,
         productDetails: {
             brand: 'Lupin Ltd.',
             expires: '15/12/2023',
@@ -26,6 +27,7 @@ export const MEDICINE: Medicine[] = [
         name: 'Pharmeasy Diabetic Protein Powder French Vanilla Flavour Jar Of 1kg',
         category: 'health-care',
         price: 140,
+        stock: Math.floor(Math.random() * 15) + 1,
         discount: 10,
         productDetails: {
             brand: 'Square Ltd.',
@@ -39,6 +41,7 @@ export const MEDICINE: Medicine[] = [
         name: 'Revital Cal 500mg Strip Of 15 Tablets',
         category: 'health-care',
         price: 117,
+        stock: Math.floor(Math.random() * 15) + 1,
         productDetails: {
             brand: 'ACI Ltd.',
             expires: '15/12/2023',
@@ -51,6 +54,7 @@ export const MEDICINE: Medicine[] = [
         name: 'Revital H Men Multivitamin With Calcium Zinc & Ginseng For Immunity Strong Bones (30 Capsules)',
         category: 'health-care',
         price: 310,
+        stock: Math.floor(Math.random() * 15) + 1,
         productDetails: {
             brand: 'ACI Ltd.',
             expires: '15/12/2023',
@@ -63,6 +67,7 @@ export const MEDICINE: Medicine[] = [
         name: 'Shelcal 500mg Strip Of 15 Tablets',
         category: 'health-care',
         price: 132,
+        stock: Math.floor(Math.random() * 15) + 1,
         productDetails: {
             brand: 'ACI Ltd.',
             expires: '15/12/2023',
@@ -75,6 +80,7 @@ export const MEDICINE: Medicine[] = [
         name: "Neurobion Forte Tablet 30'S",
         category: 'health-care',
         price:38,
+        stock: Math.floor(Math.random() * 15) + 1,
         productDetails: {
             brand: 'ACI Ltd.',
             expires: '15/12/2023',
@@ -87,6 +93,7 @@ export const MEDICINE: Medicine[] = [
         name: "Supradyn Daily Multivitamin With Essential Zinc, Vitamins, For Immunity & Energy Strip Of 15 Tablets",
         category: 'health-care',
         price:38,
+        stock: Math.floor(Math.random() * 15) + 1,
         productDetails: {
             brand: 'ACI Ltd.',
             expires: '15/12/2023',

@@ -1,22 +1,31 @@
 'use client';
 
+import {useCallback, useEffect, useState} from 'react';
 import {useParams} from 'next/navigation';
 import {MEDICINE} from '@/constants/Medicines';
 import {SimiliarProducts} from '@/components/category_slug/medicine/SimiliarProducts';
 import {MedicineHero} from '@/components/category_slug/medicine/MedicineHero';
 import {Button} from '@/components/ui/button';
+import {Medicine} from '@/types/Medicine';
 
 export const MedicinePage = () => {
 
     const {category_slug, medicine_id} = useParams();
+    const [medicine, setMedicine] = useState<Medicine>();
 
-    const selectedMedicine = MEDICINE[1];
+    const getMedicine = useCallback(() => {
+        return MEDICINE.find((medicine) => medicine.id === medicine_id);
+    }, [medicine_id]);
+
+    useEffect(() => {
+        setMedicine(getMedicine());
+    }, [setMedicine]);
 
     return (
         <section className="container py-4 md:py-8">
             <div className="grid grid-cols-1 md:grid-cols-3">
                 <div className="col-span-1 md:col-span-2 pr-4">
-                    <MedicineHero medicine={selectedMedicine}/>
+                    <MedicineHero medicine={medicine!}/>
                     <hr className="my-6"/>
                     <SimiliarProducts/>
                 </div>
@@ -35,8 +44,6 @@ export const MedicinePage = () => {
                             <li>Get free delivery on first delivery</li>
                         </ul>
                     </div>
-
-
                 </div>
             </div>
         </section>
