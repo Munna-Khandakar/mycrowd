@@ -4,6 +4,7 @@ import {useEffect, useRef, useState} from 'react';
 import Select from 'react-select';
 import {Button} from '@/components/ui/button';
 import {LocalStorageUtils} from '@/utils/LocalStorageUtils';
+import {useCartStore} from '@/stores/cartStore';
 
 type AddToCartButtonProps = {
     medicineId: string
@@ -15,6 +16,7 @@ type OptionType = { value: string; label: string };
 export const AddToCartButton = (props: AddToCartButtonProps) => {
 
     const {medicineId, stock} = props;
+    const { setItems} = useCartStore();
 
     const ref = useRef<HTMLDivElement>(null);
     const [showDropdown, setShowDropdown] = useState(false);
@@ -31,7 +33,7 @@ export const AddToCartButton = (props: AddToCartButtonProps) => {
         if (quantity === 0) {
             LocalStorageUtils.removeFromCart(medicineId);
         } else {
-            LocalStorageUtils.addToCart({id: medicineId, quantity: quantity});
+            setItems({id: medicineId, quantity: quantity});
         }
     };
 

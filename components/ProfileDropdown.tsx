@@ -12,7 +12,7 @@ export const ProfileDropdown = () => {
     return (
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
-                <CircleUserRound size={36}/>
+                <CircleUserRound className="w-[26px]"/>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
                 <DropdownMenuLabel>
