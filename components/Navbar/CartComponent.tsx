@@ -12,7 +12,7 @@ import {Minus, Plus, ShoppingCart} from 'lucide-react';
 import {ScrollArea} from '@/components/ui/scroll-area';
 import {useCartStore} from '@/stores/cartStore';
 import {Badge} from '@/components/ui/badge';
-import {Fragment} from 'react';
+import {Fragment, useEffect, useState} from 'react';
 import {MEDICINE} from '@/constants/Medicines';
 import Image from 'next/image';
 import {MedicineUtils} from '@/utils/MedicineUtils';
@@ -20,7 +20,13 @@ import {Button} from '@/components/ui/button';
 
 export const CartComponent = () => {
 
-    const {items, getItemsQuantityCount} = useCartStore();
+    const {items, getItemsQuantityCount, incrementItem, decrementItem} = useCartStore();
+
+    const [cartItemCount, setCartItemCount] = useState(0);
+
+    useEffect(() => {
+        setCartItemCount(getItemsQuantityCount());
+    }, [items, setCartItemCount]);
 
     return (
         <Drawer direction="right">
@@ -28,7 +34,7 @@ export const CartComponent = () => {
                 <div className="relative">
                     <ShoppingCart className="w-[26px]"/>
                     {
-                        getItemsQuantityCount() > 0 &&
+                        cartItemCount > 0 &&
                         <Badge variant="secondary"
                                className="absolute -top-3 -right-3 bg-red-300 px-1 py-0 rounded-2xl">{getItemsQuantityCount()}
                         </Badge>
@@ -57,7 +63,8 @@ export const CartComponent = () => {
                                                 <div>
                                                     <h1 className="text-sm  font-medium leading-5 ">{medicine?.name}</h1>
                                                 </div>
-                                                <div className="mt-4 flex flex-col md:flex-row justify-between items-center ">
+                                                <div
+                                                    className="mt-4 flex flex-col md:flex-row justify-between items-center ">
                                                     <div>
                                                         <span className="text-slate-900 font-bold text-xs"> MRP:</span>
                                                         <span
@@ -76,12 +83,20 @@ export const CartComponent = () => {
                                                         }
                                                     </div>
                                                     <div className="flex items-center gap-2 justify-center">
-                                                        <Button size="icon" variant="outline"
-                                                                className="text-xs"><Minus/></Button>
+                                                        <Button size="icon" variant="outline" className="text-xs"
+                                                                onClick={() => {
+                                                                    decrementItem(item.id);
+                                                                }}>
+                                                            <Minus/>
+                                                        </Button>
                                                         <Badge variant="secondary"
                                                                className="text-slate-900 rounded">{item.quantity}</Badge>
-                                                        <Button size="icon" variant="outline"
-                                                                className="text-xs"><Plus/></Button>
+                                                        <Button size="icon" variant="outline" className="text-xs"
+                                                                onClick={() => {
+                                                                    incrementItem(item.id);
+                                                                }}>
+                                                            <Plus/>
+                                                        </Button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -90,7 +105,13 @@ export const CartComponent = () => {
                                 })
                             }
                         </div>
-                        <Button className="align-bottom w-full my-4">Proceed To Checkout</Button>
+                        {
+                            getItemsQuantityCount() < 1
+                                ? <div className="flex items-center justify-center h-full">
+                                    <h1 className="text-2xl">No Items In Your Cart</h1>
+                                </div>
+                                : <Button className="align-bottom w-full my-4">Proceed To Checkout</Button>
+                        }
                     </ScrollArea>
                 </div>
             </DrawerContent>

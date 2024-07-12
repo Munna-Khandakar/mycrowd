@@ -31,12 +31,12 @@ export const MedicinePage = () => {
                 </div>
                 <div className="pl-2 my-auto hidden md:block"
                      style={{
-                         transform: 'translateY(-50%)'
+                         transform: 'translateY(-80%)'
                      }}>
-                    <div>
-                        <p className="mb-4">5 items in your cart</p>
-                        <Button className="w-full">View Cart</Button>
-                    </div>
+                    {/*<div>*/}
+                    {/*    <p className="mb-4">5 items in your cart</p>*/}
+                    {/*    <Button className="w-full">View Cart</Button>*/}
+                    {/*</div>*/}
                     <div className="p-4 mt-4 border-2 rounded-lg bg-teal-50 border-dashed">
                         <p className="text-sm text-slate-800 font-semibold mb-2">Offers Just for you</p>
                         <ul className="text-sm font-normal text-slate-700">

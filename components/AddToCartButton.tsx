@@ -16,7 +16,7 @@ type OptionType = { value: string; label: string };
 export const AddToCartButton = (props: AddToCartButtonProps) => {
 
     const {medicineId, stock} = props;
-    const { setItems} = useCartStore();
+    const {setItems, removeItem} = useCartStore();
 
     const ref = useRef<HTMLDivElement>(null);
     const [showDropdown, setShowDropdown] = useState(false);
@@ -31,7 +31,7 @@ export const AddToCartButton = (props: AddToCartButtonProps) => {
 
     const handleCartUpdate = (quantity: number) => {
         if (quantity === 0) {
-            LocalStorageUtils.removeFromCart(medicineId);
+            removeItem(medicineId);
         } else {
             setItems({id: medicineId, quantity: quantity});
         }

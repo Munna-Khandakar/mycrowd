@@ -14,7 +14,7 @@ export const SimiliarProducts = () => {
     return (
         <div>
             <SectionLabel label={LABEL}/>
-            <div className="flex flex-1 flex-nowrap gap-2 items-start overflow-x-auto py-2">
+            <div className="flex flex-1 flex-nowrap gap-2 items-start overflow-x-auto py-2 no-scrollbar">
                 {
                     MEDICINE.map((medicine, index) => (
                         <MedicineCard
