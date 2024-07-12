@@ -51,7 +51,7 @@ export const CartComponent = () => {
                                     const medicine = MEDICINE.find(med => med.id === item.id);
 
                                     return (
-                                        <div className="flex items-center justify-start gap-2">
+                                        <div className="flex items-center justify-start gap-2" key={index}>
                                             <Image src={medicine?.image} alt={'imagfe'} className="w-[80px]"/>
                                             <div className="w-full">
                                                 <div>

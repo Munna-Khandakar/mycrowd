@@ -1,30 +1,50 @@
+'use client';
+
 import {CartItem} from '@/types/CartItem';
 
 export class LocalStorageUtils {
+
+    static isLocalStorageAvailable() {
+        return typeof window !== 'undefined';
+    }
+
     static setItem(key: string, value: any) {
-        localStorage.setItem(key, JSON.stringify(value));
+        if (this.isLocalStorageAvailable()) {
+            localStorage.setItem(key, JSON.stringify(value));
+        }
     }
 
     static getItem(key: string) {
-        return localStorage.getItem(key);
+        if (this.isLocalStorageAvailable()) {
+            return localStorage.getItem(key);
+        }
+        return null;
     }
 
     static removeItem(key: string) {
-        localStorage.removeItem(key);
+        if (this.isLocalStorageAvailable()) {
+            localStorage.removeItem(key);
+        }
     }
 
     static getCart() {
-        return JSON.parse(this.getItem('cart') || '[]');
+        if (this.isLocalStorageAvailable()) {
+            return JSON.parse(this.getItem('cart') || '[]');
+        }
+        return [];
     }
 
     static addToCart(item: CartItem) {
+
+        if (!this.isLocalStorageAvailable()) return;
+
         const cart = this.getCart();
         const index = cart.findIndex((cartItem: CartItem) => cartItem.id === item.id);
         if (index !== -1) {
             cart[index].quantity = item.quantity;
             this.setItem('cart', cart);
             return;
-        }else{
+        } else {
             cart.push(item);
             this.setItem('cart', cart);
         }

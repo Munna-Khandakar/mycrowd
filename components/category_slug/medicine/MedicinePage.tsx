@@ -10,7 +10,7 @@ import {Medicine} from '@/types/Medicine';
 
 export const MedicinePage = () => {
 
-    const {category_slug, medicine_id} = useParams();
+    const { medicine_id} = useParams();
     const [medicine, setMedicine] = useState<Medicine>();
 
     const getMedicine = useCallback(() => {
@@ -19,7 +19,7 @@ export const MedicinePage = () => {
 
     useEffect(() => {
         setMedicine(getMedicine());
-    }, [setMedicine]);
+    }, [setMedicine,getMedicine]);
 
     return (
         <section className="container py-4 md:py-8">
