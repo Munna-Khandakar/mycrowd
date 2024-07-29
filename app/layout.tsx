@@ -1,8 +1,8 @@
 import {ReactNode} from 'react';
-import {Inter} from 'next/font/google';
-import {Navbar} from '@/components/Navbar/Navbar';
-import {Footer} from '@/components/Footer';
+import {Inter} from 'next/font/google'
 import './globals.css';
+import {TooltipProvider} from '@/components/ui/tooltip';
+import {AppConstant} from '@/constants/AppConstant';
 
 const inter = Inter({subsets: ['latin']});
 
@@ -10,7 +10,7 @@ export default function RootLayout({children}: Readonly<{ children: ReactNode; }
     return (
         <html lang="en">
         <head>
-            <title>PHARMATIC | Beyond Medication</title>
+            <title>{`${AppConstant.app.title} | ${AppConstant.app.subTitle}`}</title>
             <link rel="icon" href="/icon.ico" sizes="any"/>
             <link
                 rel="icon"
@@ -20,11 +20,12 @@ export default function RootLayout({children}: Readonly<{ children: ReactNode; }
             />
         </head>
         <body className={inter.className}>
-        <Navbar/>
         <main>
-            {children}
+            <TooltipProvider>
+                {children}
+            </TooltipProvider>
+
         </main>
-        <Footer/>
         </body>
         </html>
     );

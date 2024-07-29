@@ -1,7 +1,5 @@
 'use client';
 
-import {CartItem} from '@/types/CartItem';
-
 export class LocalStorageUtils {
 
     static isLocalStorageAvailable() {
@@ -34,28 +32,4 @@ export class LocalStorageUtils {
         return [];
     }
 
-    static addToCart(item: CartItem) {
-
-        if (!this.isLocalStorageAvailable()) return;
-
-        const cart = this.getCart();
-        const index = cart.findIndex((cartItem: CartItem) => cartItem.id === item.id);
-        if (index !== -1) {
-            cart[index].quantity = item.quantity;
-            this.setItem('cart', cart);
-            return;
-        } else {
-            cart.push(item);
-            this.setItem('cart', cart);
-        }
-    }
-
-    static removeFromCart(id: string) {
-        const cart = this.getCart();
-        const index = cart.findIndex((cartItem: CartItem) => cartItem.id === id);
-        if (index !== -1) {
-            cart.splice(index, 1);
-            this.setItem('cart', cart);
-        }
-    }
 }

@@ -28,7 +28,7 @@ export function LoginForm() {
                 <CardContent>
                     <div className="grid gap-4">
                         <div className="grid gap-2">
-                            <Label htmlFor="email">Phone</Label>
+                            <Label htmlFor="phone">Phone</Label>
                             <Input
                                 id="phone"
                                 type="number"
@@ -45,13 +45,13 @@ export function LoginForm() {
                             </div>
                             <Input id="password" type="password" required/>
                         </div>
-                        <Button type="submit" className="w-full" onClick={() => router.push('/admin')}>
+                        <Button type="submit" className="w-full" onClick={() => router.push('/dashboard')}>
                             Login
                         </Button>
                     </div>
                     <div className="mt-4 text-center text-sm">
                         Don&apos;t have an account?{' '}
-                        <Link href="#" className="underline">
+                        <Link href="/signup" className="underline">
                             Sign up
                         </Link>
                     </div>

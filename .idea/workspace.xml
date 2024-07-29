@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3be57ec6-02d1-4689-8b5c-651fb88a8ffd" name="Changes" comment="item count edit added in cart list">
+      <change afterPath="$PROJECT_DIR$/app/dashboard/fundraise/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dashboard/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dashboard/my-donations/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/dashboard/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/signup/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Dashboard/Dashboard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Dashboard/FundRaisingChart..tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Dashboard/PostEngagement.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Dashboard/SummeryCards.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/FundRaise/FundRaise.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Home/ApplicationFilters.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Home/Applications.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Home/HomePage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Home/Search.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MyDonations/DateCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MyDonations/DonationHistory.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MyDonations/MyDonations.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MyDonations/UpcomingDonationCard.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/MyDonations/UpcomingDonations.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Signup/ContactInputForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Signup/NameInputForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Signup/OtpInputForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Signup/ProceedToLogin.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Signup/Signup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Signup/SignupForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Signup/TosInputForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Signup/UserTypeSelectionForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/Signup/party.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/common/CustomizeBreadcrum.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/common/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/common/NavItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/common/SideNavbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/common/TooltipButton.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/chart.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/checkbox.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/navigation-menu.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/AppConstant.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/Donations/DonationHistory.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/Donations/UpcomigDonation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/FundRaise/FundraiseFile.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/FundRaise/gaza.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/hooks/useNavItems.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/DonationHistory.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/FundRaise.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/NavItem.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/UpcomingDonation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[category_slug]/[medicine_id]/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/[category_slug]/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/analytics/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/customers/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/dashboard/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/orders/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/products/[product_id]/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/admin/products/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/history/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/icon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/app/icon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/order/[orderId]/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/order/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/search/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/AddToCartButton.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/DealsOfTheDay/DealsOfTheDay.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Footer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HealthArticle/HealthArticleCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HealthArticle/HealthArticles.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HealthArticle/Loquat.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/HealthArticle/baby.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Login/Login.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar/AdminNavbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar/CartComponent.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar/Navbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Navbar/UserNavbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/OrderWithPrescription/OrderWithPrescription.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ProfileDropdown.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Searchbar/SearchResultCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Searchbar/Searchbar.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Searchbar/searchbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SectionLabel.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SelfAdvertisement/Family-PNG-Picture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SelfAdvertisement/PlusSvg.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/SelfAdvertisement/SelfAdvertisement.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/WhyChooseUs/ChooseUsCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/WhyChooseUs/WhyChooseUs..tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/WhyChooseUs/drugs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/WhyChooseUs/family.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/WhyChooseUs/fast-delivery.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/WhyChooseUs/map.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/admin/common/AdminHeader.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/admin/customers/Customers.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/admin/orders/Orders.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/admin/products/ProductForm.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/admin/products/Products.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/category_slug/CategorySlugPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/category_slug/medicine/MedicineHero.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/category_slug/medicine/MedicinePage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/category_slug/medicine/SimiliarProducts.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/categorysection/CategoryCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/categorysection/CategorySection.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/categorysection/ElderCare.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/categorysection/must-have.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/history/Historys.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/medicine/MedicineCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/medicine/MedicineLongCard.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/medicine/NewLaunchSection.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/medicine/TrendingNearYouSection.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/medicine/musthave.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/medicine/napa-extend.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/medicine/neurobion.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/medicine/protein-powder.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/medicine/revital-h-men.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/medicine/revital.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/medicine/shelcalt.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/medicine/softovac.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/medicine/supradyn.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/order/Order.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/order/OrdersList.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/promo/Promo.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/Articles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/Categories.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/Medicines.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/constants/WhyUs.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stores/cartStore.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/Article.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/CartItem.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/Category.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/Medicine.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/Order.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/User.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/store/CartState.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/LocalStorageUtils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/utils/LocalStorageUtils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/MedicineUtils.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2ibY2ZAvClUXGO6zGQMwwe4WtEc" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/munnakhandakar/Documents/donation/components/ui",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "/Users/munnakhandakar/.nvm/versions/node/v20.16.0/bin/node",
+    "nodejs_package_manager_path": "/Users/munnakhandakar/.nvm/versions/node/v20.4.0/bin/npm",
+    "settings.editor.selected.configurable": "settings.nodejs",
+    "ts.external.directory.path": "/Users/munnakhandakar/Documents/donation/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/components/ui" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/constants/FundRaise" />
+      <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/components/WhyChooseUs" />
+      <recent name="$PROJECT_DIR$/components/medicine" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="search bar added">
+      <option name="closed" value="true" />
+      <created>1719519495187</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719519495187</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3be57ec6-02d1-4689-8b5c-651fb88a8ffd" name="Changes" comment="search bar added" />
+      <created>1719760536702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719760536702</updated>
+      <workItem from="1719760539031" duration="1584000" />
+      <workItem from="1719762229632" duration="8104000" />
+      <workItem from="1719936650228" duration="5622000" />
+      <workItem from="1720198278890" duration="36359000" />
+      <workItem from="1720773859778" duration="16164000" />
+      <workItem from="1721732010012" duration="21826000" />
+      <workItem from="1721901134236" duration="32256000" />
+      <workItem from="1722258589400" duration="111000" />
+      <workItem from="1722258709424" duration="53000" />
+      <workItem from="1722258825122" duration="98000" />
+      <workItem from="1722258933909" duration="3141000" />
+    </task>
+    <task id="LOCAL-00002" summary="new product form added">
+      <option name="closed" value="true" />
+      <created>1719771609968</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719771609968</updated>
+    </task>
+    <task id="LOCAL-00003" summary="new product form added">
+      <option name="closed" value="true" />
+      <created>1719772258085</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719772258085</updated>
+    </task>
+    <task id="LOCAL-00004" summary="types updated">
+      <option name="closed" value="true" />
+      <created>1719939127823</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719939127823</updated>
+    </task>
+    <task id="LOCAL-00005" summary="types updated">
+      <option name="closed" value="true" />
+      <created>1719943443355</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719943443355</updated>
+    </task>
+    <task id="LOCAL-00006" summary="types updated">
+      <option name="closed" value="true" />
+      <created>1720200493058</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1720200493058</updated>
+    </task>
+    <task id="LOCAL-00007" summary="mobile">
+      <option name="closed" value="true" />
+      <created>1720202224912</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1720202224912</updated>
+    </task>
+    <task id="LOCAL-00008" summary="mobile">
+      <option name="closed" value="true" />
+      <created>1720202760010</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1720202760010</updated>
+    </task>
+    <task id="LOCAL-00009" summary="promo banner added">
+      <option name="closed" value="true" />
+      <created>1720484413993</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1720484413993</updated>
+    </task>
+    <task id="LOCAL-00010" summary="self advertisement added">
+      <option name="closed" value="true" />
+      <created>1720489309401</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1720489309401</updated>
+    </task>
+    <task id="LOCAL-00011" summary="promo issue fix">
+      <option name="closed" value="true" />
+      <created>1720491509182</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720491509182</updated>
+    </task>
+    <task id="LOCAL-00012" summary="article added">
+      <option name="closed" value="true" />
+      <created>1720542514528</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1720542514528</updated>
+    </task>
+    <task id="LOCAL-00013" summary="why us page added">
+      <option name="closed" value="true" />
+      <created>1720577150802</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1720577150802</updated>
+    </task>
+    <task id="LOCAL-00014" summary="navbar fixed">
+      <option name="closed" value="true" />
+      <created>1720726394110</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1720726394110</updated>
+    </task>
+    <task id="LOCAL-00015" summary="localstorage functionality added">
+      <option name="closed" value="true" />
+      <created>1720733509766</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1720733509767</updated>
+    </task>
+    <task id="LOCAL-00016" summary="cart component added">
+      <option name="closed" value="true" />
+      <created>1720786168749</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1720786168749</updated>
+    </task>
+    <task id="LOCAL-00017" summary="localstorage issue fixed">
+      <option name="closed" value="true" />
+      <created>1720786930156</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1720786930156</updated>
+    </task>
+    <task id="LOCAL-00018" summary="item count edit added in cart list">
+      <option name="closed" value="true" />
+      <created>1720792435864</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1720792435864</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="search bar added" />
+    <MESSAGE value="new product form added" />
+    <MESSAGE value="types updated" />
+    <MESSAGE value="mobile" />
+    <MESSAGE value="promo banner added" />
+    <MESSAGE value="self advertisement added" />
+    <MESSAGE value="promo issue fix" />
+    <MESSAGE value="article added" />
+    <MESSAGE value="why us page added" />
+    <MESSAGE value="navbar fixed" />
+    <MESSAGE value="localstorage functionality added" />
+    <MESSAGE value="cart component added" />
+    <MESSAGE value="localstorage issue fixed" />
+    <MESSAGE value="item count edit added in cart list" />
+    <option name="LAST_COMMIT_MESSAGE" value="item count edit added in cart list" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
