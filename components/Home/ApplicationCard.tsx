@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import {FundRaiseType} from '@/types/FundRaise';
-import {FundRaiseProgressBar} from '@/components/Home/FundRaiseProgressBar';
+import {FundRaiseProgressBar} from '@/components/common/FundRaiseProgressBar';
 
 type ApplicationCardProps = {
     fundraise: FundRaiseType
