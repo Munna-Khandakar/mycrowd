@@ -6,13 +6,13 @@ import 'react-sliding-pane/dist/react-sliding-pane.css';
 import './ApplicationFilter.css';
 import {Switch} from '@/components/ui/switch';
 import {Label} from '@/components/ui/label';
+import {CATEGORY_OPTIONS} from '@/enums/Category';
 
 enum ApplicationCategory {
     ALL = ' all',
     EMERGENCY = ' emergency',
 }
 
-const categories = ['education', 'health', 'food', 'environment', 'emergency', 'business', 'event', 'volunteer', 'family'];
 const areas = ['personal', 'community', 'campaign', 'organization'];
 
 export const ApplicationFilters = () => {
@@ -89,14 +89,14 @@ export const ApplicationFilters = () => {
                         </div>
                         <div className="flex gap-1 flex-wrap">
                             {
-                                categories.map((category, index) => (
+                                CATEGORY_OPTIONS.map((category, index) => (
                                     <Button
                                         key={index}
                                         className="gap-1 capitalize"
                                         size="sm"
                                         variant="outline"
                                     >
-                                        {category}
+                                        {category.label}
                                     </Button>
                                 ))
                             }

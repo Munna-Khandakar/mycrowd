@@ -7,5 +7,5 @@ export type FundRaiseType = {
     status: string,
     target: number,
     raise: number,
-    currency: string
+    currency: string,
 }

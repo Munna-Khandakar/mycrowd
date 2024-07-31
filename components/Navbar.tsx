@@ -29,7 +29,7 @@ export const Navbar = () => {
                     </NavigationMenuItem>
                 </NavigationMenuList>
             </NavigationMenu>
-            <Link href="#" legacyBehavior passHref>
+            <Link href="/" legacyBehavior passHref>
                 <Image src={Logo} alt={'app logo'} width={60}/>
             </Link>
             <NavigationMenu>
