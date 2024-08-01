@@ -1,10 +1,11 @@
 import Image from 'next/image';
-import {User, Share, HandCoins} from 'lucide-react';
+import {User, Share, HandCoins, Sigma} from 'lucide-react';
 import {Badge} from '@/components/ui/badge';
 import {Card, CardContent, CardHeader} from '@/components/ui/card';
 import {FundRaiseProgressBar} from '@/components/common/FundRaiseProgressBar';
 import {Button} from '@/components/ui/button';
 import {FundraiseFile} from '@/constants/FundRaise/FundraiseFile';
+import {Donar} from '@/components/Application/Donar';
 
 export const Application = () => {
 
@@ -22,15 +23,34 @@ export const Application = () => {
                     </div>
 
                 </div>
-                <Card className="col-span-1">
+                <Card className="col-span-1 max-h-[calc(100vh-35%)]">
                     <CardHeader>
                         21 Donations so far
-                        <FundRaiseProgressBar riased={500} target={1200}/>
+                        <FundRaiseProgressBar raised={500} target={1200}/>
                     </CardHeader>
                     <CardContent>
-                        <div className="flex gap-2">
-                            <Button className="gap-1"> <Share size={15}/>Share </Button>
-                            <Button className="gap-1"> <HandCoins size={15}/>Donate</Button>
+                        <div className="flex gap-2 flex-col">
+                            <Button className="gap-1" size="lg" variant="secondary"> <Share size={15}/>Share </Button>
+                            <Button className="gap-1" size="lg"> <HandCoins size={15}/>Donate</Button>
+                        </div>
+                        <div className="flex gap-2 items-center mt-5 mb-2">
+                            <div className="bg-fuchsia-200 p-2 w-fit rounded-full">
+                                <Sigma/>
+                            </div>
+                            <span className="text-base font-semibold text-slate-700">610 people just donated</span>
+                        </div>
+                        <div className="h-[200px] overflow-scroll">
+                            <ul className="flex flex-col gap-1">
+                                <Donar/>
+                                <Donar/>
+                                <Donar/>
+                                <Donar/>
+                                <Donar/>
+                                <Donar/>
+                                <Donar/>
+                                <Donar/>
+                                <Donar/>
+                            </ul>
                         </div>
                     </CardContent>
                 </Card>
