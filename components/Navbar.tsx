@@ -6,6 +6,7 @@ import {
     NavigationMenuLink,
     NavigationMenuList, navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu';
+import {Bolt} from 'lucide-react';
 import Logo from '@/public/logo.png';
 
 export const Navbar = () => {
@@ -37,14 +38,15 @@ export const Navbar = () => {
                     <NavigationMenuItem>
                         <Link href="#" legacyBehavior passHref>
                             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                Documentation
+                                About Us
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>
                     <NavigationMenuItem>
-                        <Link href="#" legacyBehavior passHref>
-                            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                Documentation
+                        <Link href={'/dashboard'} legacyBehavior passHref>
+                            <NavigationMenuLink className={`${navigationMenuTriggerStyle()} gap-2`}>
+                                <Bolt size={15}/>
+                                Dashboard
                             </NavigationMenuLink>
                         </Link>
                     </NavigationMenuItem>

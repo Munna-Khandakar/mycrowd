@@ -32,7 +32,7 @@ export const CustomizeBreadcrum = () => {
                         <Fragment key={index}>
                             <BreadcrumbItem>
                                 <BreadcrumbLink asChild>
-                                    <Link href={href}>{label}</Link>
+                                    <Link href={href} className="capitalize">{label || path}</Link>
                                 </BreadcrumbLink>
                             </BreadcrumbItem>
                             <BreadcrumbSeparator />

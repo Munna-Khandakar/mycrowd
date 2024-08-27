@@ -1,18 +1,19 @@
 'use client';
 
 import Image from 'next/image';
-import {Copy, Pencil, Search, Settings} from 'lucide-react';
+import Link from 'next/link';
+import {CirclePlus, Copy, Pencil, Settings} from 'lucide-react';
 import {SimpleTable} from '@/components/SimpleTable';
 import {
     TableCell,
     TableHead,
     TableRow,
 } from '@/components/ui/table';
-import {Input} from '@/components/ui/input';
-import {FundraiseFile} from '@/constants/FundRaise/FundraiseFile';
-import {FundRaiseType} from '@/types/FundRaise';
-import {AppConstant} from '@/constants/AppConstant';
 import {TooltipButton} from '@/components/common/TooltipButton';
+import {FundRaiseType} from '@/types/FundRaise';
+import {FundraiseFile} from '@/constants/FundRaise/FundraiseFile';
+import {AppConstant} from '@/constants/AppConstant';
+import {NavigationLink} from '@/constants/NavigationLink';
 
 export const FundRaise = () => {
     return (
@@ -22,13 +23,11 @@ export const FundRaise = () => {
                 subTitle={AppConstant.fundRaise.subTitle}
                 actionItems={
                     <div className="relative ml-auto pr-2 flex-1 md:grow-0">
-                        <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground"/>
-                        <Input
-                            type="search"
-                            title={AppConstant.fundRaise.search}
-                            placeholder="Search..."
-                            className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
-                        />
+                        <Link href={NavigationLink.newFundraise}
+                              className="flex gap-2 text-nowrap items-center bg-black text-white px-2 py-1 rounded">
+                            <CirclePlus size={18}/>
+                            New Application
+                        </Link>
                     </div>
                 }
                 tableHeader={

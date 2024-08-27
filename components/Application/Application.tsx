@@ -39,7 +39,7 @@ export const Application = () => {
                             </div>
                             <span className="text-base font-semibold text-slate-700">610 people just donated</span>
                         </div>
-                        <div className="h-[200px] overflow-scroll">
+                        <div className="h-[300px] overflow-scroll">
                             <ul className="flex flex-col gap-1">
                                 <Donar/>
                                 <Donar/>

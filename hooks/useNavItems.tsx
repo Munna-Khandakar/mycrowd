@@ -1,26 +1,27 @@
-import { useMemo } from 'react';
-import { NavItemType } from '@/types/NavItem';
-import { ArrowDownToDot, ArrowUpFromDot, Home } from 'lucide-react';
+import {useMemo} from 'react';
+import {NavItemType} from '@/types/NavItem';
+import {ArrowDownToDot, ArrowUpFromDot, Home} from 'lucide-react';
+import {NavigationLink} from '@/constants/NavigationLink';
 
 const useNavItems = () => {
     const navItems: NavItemType[] = useMemo(() => [
         {
             id: '1',
             label: 'Dashboard',
-            link: '/dashboard',
-            icon: <Home className='h-5 w-5' />
+            link: NavigationLink.dashboard,
+            icon: <Home className="h-5 w-5"/>
         },
         {
             id: '2',
             label: 'Fundraise',
-            link: '/dashboard/fundraise',
-            icon: <ArrowDownToDot className='h-5 w-5' />
+            link: NavigationLink.fundraise,
+            icon: <ArrowDownToDot className="h-5 w-5"/>
         },
         {
             id: '3',
             label: 'My Donations',
-            link: '/dashboard/my-donations',
-            icon: <ArrowUpFromDot className='h-5 w-5' />
+            link: NavigationLink.myDonations,
+            icon: <ArrowUpFromDot className="h-5 w-5"/>
         },
     ], []);
 
@@ -28,7 +29,7 @@ const useNavItems = () => {
         return navItems.find((item: NavItemType) => item.link === pathname);
     };
 
-    return { navItems, getNavItemFromPathname };
+    return {navItems, getNavItemFromPathname};
 };
 
 export default useNavItems;

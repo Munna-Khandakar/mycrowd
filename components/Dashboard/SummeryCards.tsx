@@ -29,7 +29,7 @@ export const SummeryCards = ()=>{
             <Card>
                 <CardHeader>
                     <div className="flex items-center justify-between">
-                        <p className="text-xs text-slate-500 font-medium">Total Funds</p>
+                        <p className="text-xs text-slate-500 font-medium">My Donations</p>
                         <ArrowUpFromDot className="h-5 w-5"/>
                     </div>
                 </CardHeader>
