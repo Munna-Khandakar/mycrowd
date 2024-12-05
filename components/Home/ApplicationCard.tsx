@@ -18,7 +18,7 @@ export const ApplicationCard = (props: ApplicationCardProps) => {
                 alt={'donation'}
                 className="w-full h-[200px] object-cover rounded"
             />
-            <div className="py-4 flex flex-col items-start justify-between h-[125px]">
+            <div className="py-4 flex flex-col items-start justify-start md:justify-between h-[125px]">
                 <h1 className="text-base font-semibold mb-4 text-wrap truncate line-clamp-2">{fundraise.title}</h1>
                <div className="w-full">
                    <FundRaiseProgressBar raised={fundraise.raise} target={fundraise.target}/>

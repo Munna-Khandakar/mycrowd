@@ -11,8 +11,8 @@ import Logo from '@/public/logo.png';
 
 export const Navbar = () => {
     return (
-        <div className="container flex justify-between items-center">
-            <NavigationMenu>
+        <div className="flex container justify-center md:justify-between items-center">
+            <NavigationMenu className='hidden md:block'>
                 <NavigationMenuList>
                     <NavigationMenuItem>
                         <Link href="#" legacyBehavior passHref>
@@ -33,7 +33,7 @@ export const Navbar = () => {
             <Link href="/" legacyBehavior passHref>
                 <Image src={Logo} alt={'app logo'} width={60}/>
             </Link>
-            <NavigationMenu>
+            <NavigationMenu  className='hidden md:block'>
                 <NavigationMenuList>
                     <NavigationMenuItem>
                         <Link href="#" legacyBehavior passHref>

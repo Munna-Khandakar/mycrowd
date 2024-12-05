@@ -1,6 +1,6 @@
 import {CategoryEnum} from '@/enums/Category';
 import GazaImage from './gaza.webp';
-import CitizenImage from './CitizenFOundationImage.jpeg';
+import CitizenImage from './gaza.webp';
 
 export const FundraiseFile = [
     {
