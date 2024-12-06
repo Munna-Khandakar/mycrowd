@@ -14,56 +14,70 @@ export const Application = () => {
 
     return (
         <div className="container">
-            <h1 className="my-5 text-4xl font-bold">{application.title}</h1>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 pb-10">
                 <div className="col-span-1 md:col-span-2">
+                    <div className="mb-4">
+                        <h1 className="text-lg md:text-4xl font-bold text-start">{application.title}</h1>
+                        <div className="flex flex-col md:flex-row justify-between">
+                            <div className="text-xs md:text-sm opacity-50">
+                                <span>Deadline: </span> <span>24 June, 2024</span>
+                            </div>
+                            <div className="text-xs md:text-sm opacity-50">
+                                <span>Create on: </span> <span>24 June, 2024</span>
+                            </div>
+                        </div>
+                    </div>
                     <Image src={application.image} alt={'logo'} className="object-cover w-full h-[400px] rounded-2xl"/>
                     <div className="flex gap-2 items-center my-5 ">
                         <User size={24} className="inline-block"/>
                         <span>Mehedi Hasan Emon is organizing this fundraiser.</span> <Badge>Humanity</Badge>
                     </div>
                     <div className="text-justify">
-                        <h2>What is Lorem Ipsum?</h2>
+                        <h2 className="text-lg font-semibold">Summery</h2>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages, and more recently with desktop publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.
+                            In a year thats shown the worst of humanity, we need show the best of Ireland and our
+                            genorosity children enduring direct provision this Christmas. We are raising funds to
+                            Times are tough for everyone, but imagine spending your childhood in a Direct Provision
+                            centre through all of this. For many of these kids, Christmas can feel like just another
+                            difficult day. We’re here to change that—and we need your help to make it happen.
                         </p>
-                        <h2>What is Lorem Ipsum?</h2>
+                    </div>
+                    <div className="text-justify mt-4">
+                        <h2 className="text-lg font-semibold">Description</h2>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the  standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages, and more recently with desktop publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.
+                            In a year thats shown the worst of humanity, we need show the best of Ireland and our
+                            genorosity children enduring direct provision this Christmas. We are raising funds to
+                            Times are tough for everyone, but imagine spending your childhood in a Direct Provision
+                            centre through all of this. For many of these kids, Christmas can feel like just another
+                            difficult day. We’re here to change that—and we need your help to make it happen.
+                            <br/>
+                            In a year thats shown the worst of humanity, we need show the best of Ireland and our
+                            genorosity children enduring direct provision this Christmas. We are raising funds to
+                            Times are tough for everyone, but imagine spending your childhood in a Direct Provision
+                            centre through all of this. For many of these kids, Christmas can feel like just another
+                            difficult day. We’re here to change that—and we need your help to make it happen.
                         </p>
-                        <h2>What is Lorem Ipsum?</h2>
-                        <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the standard dummy text ever since the 1500s, when an unknown printer took a
-                            galley of type and scrambled it to make a type specimen book. It has survived not only five
-                            centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
-                            It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-                            passages, and more recently with desktop publishing software like Aldus PageMaker including
-                            versions of Lorem Ipsum.
-                        </p>
+                    </div>
+                    <div className="text-justify mt-4 border">
+                        <h2 className="text-lg font-semibold">Supporting documents</h2>
+                        <div className="">
+                            <img src="https://img.yumpu.com/5304029/1/500x640/guide-to-supporting-documents.jpg"/>
+                            <img src="https://img.yumpu.com/5304029/1/500x640/guide-to-supporting-documents.jpg"/>
+                            <img src="https://img.yumpu.com/5304029/1/500x640/guide-to-supporting-documents.jpg"/>
+                        </div>
+
                     </div>
                 </div>
                 <div className="relative col-span-1">
-                    <Card className="sticky top-0">
+                    <Card className="sticky top-14">
                         <CardHeader>
                             21 Donations so far
                             <FundRaiseProgressBar raised={500} target={1200}/>
                         </CardHeader>
                         <CardContent>
                             <div className="flex gap-2 flex-col">
-                                <Button className="gap-1" size="lg" variant="secondary"> <Share size={15}/>Share </Button>
+                                <Button className="gap-1" size="lg" variant="secondary"> <Share size={15}/>Share
+                                </Button>
                                 <Button className="gap-1" size="lg"> <HandCoins size={15}/>Donate</Button>
                             </div>
                             <div className="flex gap-2 items-center mt-5 mb-2">
