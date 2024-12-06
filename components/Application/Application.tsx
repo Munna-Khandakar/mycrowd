@@ -7,6 +7,7 @@ import {Button} from '@/components/ui/button';
 import {FundraiseFile} from '@/constants/FundRaise/FundraiseFile';
 import {PaymentMethod} from '@/components/Application/PaymentMethod';
 import {PaymentGateway} from '@/enums/PaymentGateway';
+import {SupportingDocs} from '@/components/Application/SupportingDocs';
 
 export const Application = () => {
 
@@ -58,15 +59,7 @@ export const Application = () => {
                             difficult day. We’re here to change that—and we need your help to make it happen.
                         </p>
                     </div>
-                    <div className="text-justify mt-4 border">
-                        <h2 className="text-lg font-semibold">Supporting documents</h2>
-                        <div className="">
-                            <img src="https://img.yumpu.com/5304029/1/500x640/guide-to-supporting-documents.jpg"/>
-                            <img src="https://img.yumpu.com/5304029/1/500x640/guide-to-supporting-documents.jpg"/>
-                            <img src="https://img.yumpu.com/5304029/1/500x640/guide-to-supporting-documents.jpg"/>
-                        </div>
-
-                    </div>
+                  <SupportingDocs/>
                 </div>
                 <div className="relative col-span-1">
                     <Card className="sticky top-14">
